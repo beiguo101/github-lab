@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>协调与汇报 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>协调与汇报</h1>
+    <p>2 条提示词</p>
+  </header>
+  <article class="prompt">
+  
+  <h2>发起跨组协调</h2>
+  <p>把阻塞写成对方看完就知道该回复什么的请求。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：发起跨组协调">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：发起跨组协调">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请把以下情况整理为一条可以直接修改后发送的跨组协调消息。
+
+接收方：[团队或角色]
+当前情况及已有沟通：[粘贴]
+我方期望：[希望获得的结果及期望时间]
+
+先从已有沟通中找出对方已经回答的内容。
+按“事情进展到哪里 → 卡在哪项依赖 → 影响哪个节点 → 希望对方具体回复什么”写出消息。
+区分我方期望时间与对方已经承诺的时间，保留尚未确认的部分。
+结尾给出一个对方可以直接回答的问题。若已有可行备选，可以请对方选择，并写明每个选择的影响。
+
+输出两段。第一段是可发送正文，第二段是供我核实的待确认信息。</pre>
+    <a class="source" href="https://github.com/asgeirtj/system_prompts_leaks/blob/main/Misc/t3-code.md">参考 · t3-code 的澄清规则</a>
+  </template>
+</article>
+<article class="prompt">
+  
+  <h2>写一份向上汇报</h2>
+  <p>从日常记录提取关键进展、风险和需要管理层决定的事。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：写一份向上汇报">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：写一份向上汇报">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请把以下工作记录改写成一份面向[汇报对象]的[日报／周报／专题汇报]。
+
+汇报周期：[起止日期]
+本期目标：[目标]
+工作记录：[粘贴]
+
+开头用两句话回答目标推进到哪里、目前最值得关注什么。
+正文只保留影响目标的进展、偏差和需要决策的事项。每个需要决策的事项写清请谁决定什么、最晚何时需要结论、延后会影响什么。材料未提供的信息标为待确认。
+
+保留数字、日期、交付阶段和信息来源。“已提交”“已提测”“复测通过”“已上线”按材料原意使用。预计时间和口头意向保留各自的确定程度。
+输出可发送的汇报正文。若原材料存在会改变汇报结论的矛盾，在正文后单列给我核实。</pre>
+    <a class="source" href="https://github.com/Yila-AI/awesome-research-skills">参考 · Awesome Research Skills 的结论强度原则</a>
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

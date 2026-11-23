@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>软件项目 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>软件项目</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>小需求交付</h2>
+  <p>从工单到测试证据，让业务有据可验收。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：小需求交付">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：小需求交付">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 澄清变更范围
+
+你协助处理一条小需求。输入：[工单原文]、[允许查阅的代码与历史需求]、[当前行为]、[业务负责人]。先只读梳理相关入口、受影响场景和存在歧义的规则，附代码路径或工单链接。给出最小范围和待确认问题。把正常场景、一个边界场景写成“给定 → 当 → 则”，请业务确认。
+
+### 第 2 轮 · 按确认内容交付
+
+已确认的规则与验收样例：[粘贴]。授权修改范围：[填写]。将每条验收样例映射到实现和测试位置。若具备授权与运行条件，实施最小改动并运行样例；否则给出可交接的实施清单。发现规则冲突时将具体样例交回业务确认。
+
+### 第 3 轮 · 依据证据验收
+
+输入：[实际测试结果、版本、测试位置和业务反馈]。逐条标记通过、失败或未运行，附可回查证据。形成业务验收记录；业务负责人接受后标为完成，退回时记录原因和下一步。缺测试记录的场景标为待验收。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 澄清变更范围</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 澄清变更范围">复制本轮</button>
+      </div>
+      <pre class="prompt-body">你协助处理一条小需求。输入：[工单原文]、[允许查阅的代码与历史需求]、[当前行为]、[业务负责人]。先只读梳理相关入口、受影响场景和存在歧义的规则，附代码路径或工单链接。给出最小范围和待确认问题。把正常场景、一个边界场景写成“给定 → 当 → 则”，请业务确认。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 按确认内容交付</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 按确认内容交付">复制本轮</button>
+      </div>
+      <pre class="prompt-body">已确认的规则与验收样例：[粘贴]。授权修改范围：[填写]。将每条验收样例映射到实现和测试位置。若具备授权与运行条件，实施最小改动并运行样例；否则给出可交接的实施清单。发现规则冲突时将具体样例交回业务确认。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 依据证据验收</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 依据证据验收">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[实际测试结果、版本、测试位置和业务反馈]。逐条标记通过、失败或未运行，附可回查证据。形成业务验收记录；业务负责人接受后标为完成，退回时记录原因和下一步。缺测试记录的场景标为待验收。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>发布后验证</h2>
+  <p>部署后按本次变更冒烟，失败项跟踪到复验或恢复。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：发布后验证">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：发布后验证">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确定本次验证清单
+
+你协助值班验证一次部署。输入：[部署编号、版本、环境、本次变更和获准的冒烟入口]。把变更项映射到检查项和预期现象，记录关键旧行为。标注需要凭据、数据写入或人工参与的检查。范围不清时先请值班负责人确认。
+
+### 第 2 轮 · 汇总冒烟和定位证据
+
+输入：[本次冒烟结果、日志片段、时间窗和版本]。按检查项列通过、失败、未运行。对失败项注明实际现象、版本、关联日志或请求标识、影响范围及建议负责人。把已验证的事实与待核查原因分开，交值班人决定修复、观察或回退。
+
+### 第 3 轮 · 复验与关闭
+
+输入：[处理决定、复跑结果或回退后检查]。原失败检查逐条复验；发生回退时核对恢复后的版本和关键行为。有通过证据才能关闭对应项。仍失败或未验证的项目保留待跟踪，注明责任人、下一步和复查时间。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确定本次验证清单</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确定本次验证清单">复制本轮</button>
+      </div>
+      <pre class="prompt-body">你协助值班验证一次部署。输入：[部署编号、版本、环境、本次变更和获准的冒烟入口]。把变更项映射到检查项和预期现象，记录关键旧行为。标注需要凭据、数据写入或人工参与的检查。范围不清时先请值班负责人确认。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 汇总冒烟和定位证据</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 汇总冒烟和定位证据">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[本次冒烟结果、日志片段、时间窗和版本]。按检查项列通过、失败、未运行。对失败项注明实际现象、版本、关联日志或请求标识、影响范围及建议负责人。把已验证的事实与待核查原因分开，交值班人决定修复、观察或回退。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 复验与关闭</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 复验与关闭">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[处理决定、复跑结果或回退后检查]。原失败检查逐条复验；发生回退时核对恢复后的版本和关键行为。有通过证据才能关闭对应项。仍失败或未验证的项目保留待跟踪，注明责任人、下一步和复查时间。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>缺陷复现与回归</h2>
+  <p>从缺陷报告提炼复现案例，修复后用同一案例复验。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：缺陷复现与回归">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：缺陷复现与回归">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 整理可复现案例
+
+输入：[缺陷描述、预期行为、受影响版本、环境和脱敏日志]。拆出前置条件、最小输入、操作步骤和实际结果。标明哪些是已观察事实，哪些来自推测。给测试同事一份可执行的复现单；缺关键证据时列需要补充的信息及负责人。
+
+### 第 2 轮 · 复现后修复
+
+输入：[测试复现结果、授权修改范围、可用代码和测试]。在稳定复现的案例上定位原因，关联日志或代码依据；获准后实施最小修复并保留原案例。没有复现记录时转待补证据，注明下一次可做的检查。
+
+### 第 3 轮 · 重跑并复核
+
+输入：[原案例、候选版本、实际测试结果]。重跑原输入并检查一条最相关的正常路径。分别记录修复前后行为、检查环境和证据。以原案例通过作为关单证据；仍失败或未运行的项目列下一步。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 整理可复现案例</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 整理可复现案例">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[缺陷描述、预期行为、受影响版本、环境和脱敏日志]。拆出前置条件、最小输入、操作步骤和实际结果。标明哪些是已观察事实，哪些来自推测。给测试同事一份可执行的复现单；缺关键证据时列需要补充的信息及负责人。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 复现后修复</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 复现后修复">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[测试复现结果、授权修改范围、可用代码和测试]。在稳定复现的案例上定位原因，关联日志或代码依据；获准后实施最小修复并保留原案例。没有复现记录时转待补证据，注明下一次可做的检查。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 重跑并复核</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 重跑并复核">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[原案例、候选版本、实际测试结果]。重跑原输入并检查一条最相关的正常路径。分别记录修复前后行为、检查环境和证据。以原案例通过作为关单证据；仍失败或未运行的项目列下一步。</pre>
+    </section>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

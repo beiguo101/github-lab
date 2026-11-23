@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>项目与测试 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>项目与测试</h1>
+    <p>2 条提示词</p>
+  </header>
+  <article class="prompt">
+  
+  <h2>梳理今天的项目节奏</h2>
+  <p>从计划、上次记录和新增消息里找出今天需要跟进的事。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：梳理今天的项目节奏">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：梳理今天的项目节奏">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请根据以下材料，为我整理今天的项目跟进清单。
+
+今天的日期：[日期]
+计划节点：[粘贴计划]
+上次跟进记录：[粘贴记录，可留空]
+本次新增消息：[粘贴消息]
+
+先把涉及同一交付物的消息放在一起，用具体日期比较计划与最新进展。
+优先列出今天需要有人行动的事项，每项写清涉及节点、最新事实、今天要跟什么、找谁确认以及依据哪条消息。负责人或日期缺失就标“待确认”。
+
+区分节点已错过和节点未到但前置条件尚未满足两种情况。
+最后列出相比上次真正发生变化的事项。没有上次记录时，仅报告当前情况。</pre>
+    <a class="source" href="https://github.com/asgeirtj/system_prompts_leaks/blob/main/Misc/t3-code.md">参考 · t3-code 的澄清规则</a>
+  </template>
+</article>
+<article class="prompt">
+  
+  <h2>按问题号合并测试反馈</h2>
+  <p>把测试清单、开发答复和业务复测结果更新到同一份台账。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：按问题号合并测试反馈">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：按问题号合并测试反馈">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请用本次反馈更新业务测试问题台账。
+
+上次台账：[粘贴，可留空]
+本次反馈：[粘贴，尽量保留问题号、日期、反馈方和原话]
+
+以完整问题号作为合并依据。不同问题号即使描述相似也分开保留。
+每个问题输出一行：问题号｜问题摘要｜开发最新反馈｜业务最新复测结果｜当前待办｜依据。
+没有新反馈的问题保留原记录。没有问题号的反馈单列为“待匹配”。
+
+“开发反馈已修复”“业务复测通过”“问题已关闭”分别依据对应记录填写。
+若反馈冲突，保留双方说法和时间，指出需要核实的那一点。
+最后只列本次发生变化的问题号及变化内容。</pre>
+    <a class="source" href="https://github.com/Yila-AI/awesome-research-skills">参考 · Awesome Research Skills 的证据保留原则</a>
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

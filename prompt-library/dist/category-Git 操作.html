@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>Git 操作 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>Git 操作</h1>
+    <p>12 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>检查分支领先和落后多少</h2>
+  <p>按明确引用比较双侧独有提交。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：检查分支领先和落后多少">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：检查分支领先和落后多少">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发分支差异检查器。输入 [仓库路径]、[本地引用]、[比较基准]，先解析并显示两边所指提交，再输出两侧独有数量和提交短摘要。遇到缺失引用或无法可靠判断的历史，报告原因。用相等、仅领先、仅落后和双侧分叉四种图验证，不连接远端。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>生成改动和暂存清单</h2>
+  <p>从 Git 状态区分工作区、暂存区和冲突。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：生成改动和暂存清单">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：生成改动和暂存清单">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发只读 Git 命令行工具。输入 [仓库路径]，输出未暂存、已暂存、未跟踪和冲突文件；同一文件同时在两个区域有变化时分别显示状态。用 Git 可稳定解析的输出格式，验证含空格、中文和重命名的路径。用临时仓库构造上述状态，对照 Git 原始状态检查报告。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>从指定基准创建任务分支</h2>
+  <p>预览提交位置后，按授权创建本地分支。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从指定基准创建任务分支">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：从指定基准创建任务分支">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发创建本地分支的小工具。输入 [仓库路径]、[基准引用]、[新分支名]，默认打印目标提交和将创建的分支，显式应用时再次确认基准与目标状态。创建分支和切换工作区分开处理。用临时仓库验证分支准确指向指定提交；目标已存在、分支名非法或基准无效时不覆盖已有分支。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>生成两个版本间的发布改动清单</h2>
+  <p>把提交范围整理成可核对的发布条目。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：生成两个版本间的发布改动清单">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：生成两个版本间的发布改动清单">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发只读发布清单生成器。输入 [仓库]、[起点引用]、[终点引用]、[模块路径与问题号规则]。定义起点不包含、终点包含的比较范围，并列出提交标识、摘要、识别到的问题号及触及模块。无问题号标待关联。验证用临时仓库的两个标签和数条可核对提交；引用无共同关系或区间不符合选定语义时报告。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>同步本地分支，遇到分叉停下</h2>
+  <p>仅在满足前提时快进，其他情况给出证据。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：同步本地分支，遇到分叉停下">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：同步本地分支，遇到分叉停下">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 检查同步条件
+
+输入 [仓库、目标分支和上游引用]。检查本地状态、上游可用性、当前引用和独有提交。列明是否需要获准刷新上游，并让用户确认同步范围。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 应用快进
+
+确认信息：[粘贴]。实现预览和显式应用，应用前重新核实分支与工作区。只在当前分支确实可快进时更新；分叉或工作区存在会受影响的变更时停下。
+
+### 第 3 轮 · 验证三种结果
+
+用临时仓库验证已同步、可快进和分叉。检查最终提交位置、未提交内容和分叉报告，不访问真实远端。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 检查同步条件</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 检查同步条件">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [仓库、目标分支和上游引用]。检查本地状态、上游可用性、当前引用和独有提交。列明是否需要获准刷新上游，并让用户确认同步范围。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 应用快进</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 应用快进">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认信息：[粘贴]。实现预览和显式应用，应用前重新核实分支与工作区。只在当前分支确实可快进时更新；分叉或工作区存在会受影响的变更时停下。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验证三种结果</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验证三种结果">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用临时仓库验证已同步、可快进和分叉。检查最终提交位置、未提交内容和分叉报告，不访问真实远端。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>临时收起改动，再恢复原任务</h2>
+  <p>明确收起范围，并核对暂存和未跟踪文件。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：临时收起改动，再恢复原任务">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：临时收起改动，再恢复原任务">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认保存范围
+
+输入 [仓库与任务名称]。记录当前分支、工作区、索引与未跟踪文件，明确哪些纳入临时保存、恢复时是否恢复索引。只设计预览及验收。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现收起和恢复
+
+确认规则与授权：[填写]。开发保存及恢复入口，记录可稳定识别的保存记录。恢复前展示目标和现状。若恢复产生冲突，保留保存记录并给出当前状态。
+
+### 第 3 轮 · 验证回到原状态
+
+在临时仓库核对暂存、未暂存和未跟踪文件的保存前后状态；另外验证目标被修改时的冲突。明确恢复成功后如何由用户决定清理保存记录。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认保存范围</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认保存范围">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [仓库与任务名称]。记录当前分支、工作区、索引与未跟踪文件，明确哪些纳入临时保存、恢复时是否恢复索引。只设计预览及验收。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现收起和恢复</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现收起和恢复">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认规则与授权：[填写]。开发保存及恢复入口，记录可稳定识别的保存记录。恢复前展示目标和现状。若恢复产生冲突，保留保存记录并给出当前状态。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验证回到原状态</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验证回到原状态">复制本轮</button>
+      </div>
+      <pre class="prompt-body">在临时仓库核对暂存、未暂存和未跟踪文件的保存前后状态；另外验证目标被修改时的冲突。明确恢复成功后如何由用户决定清理保存记录。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>筛选并清理已合并的本地分支</h2>
+  <p>先预览候选，再按确认清单安全删除。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：筛选并清理已合并的本地分支">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：筛选并清理已合并的本地分支">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 定清理规则
+
+输入 [仓库、比较基准、保留名单]。定义已合并候选的判断依据，排除当前分支、其他工作树正在使用的分支以及明确保留分支。给出预览字段。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现预览与应用
+
+确认的基准和删除清单：[填写]。实现只读预览和显式删除，应用前重新校验每个候选；任何条件变化时单列跳过原因。
+
+### 第 3 轮 · 复查删除影响
+
+用临时仓库覆盖已合并、未合并、保留和其他工作树在用四类。输出实际删除、跳过及理由，确认保留引用和工作树仍可访问。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 定清理规则</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 定清理规则">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [仓库、比较基准、保留名单]。定义已合并候选的判断依据，排除当前分支、其他工作树正在使用的分支以及明确保留分支。给出预览字段。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现预览与应用</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现预览与应用">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认的基准和删除清单：[填写]。实现只读预览和显式删除，应用前重新校验每个候选；任何条件变化时单列跳过原因。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 复查删除影响</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 复查删除影响">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用临时仓库覆盖已合并、未合并、保留和其他工作树在用四类。输出实际删除、跳过及理由，确认保留引用和工作树仍可访问。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>只暂存并提交我选定的文件</h2>
+  <p>先核对索引，确保提交不会带入其他改动。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：只暂存并提交我选定的文件">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：只暂存并提交我选定的文件">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 定义提交边界
+
+材料：[仓库、目标文件、提交说明]。先检查工作区和暂存区，核对同时有暂存与未暂存改动的文件。设计预览，说明预计提交的内容及如何保留已有暂存项，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现受控提交
+
+授权的文件和内容边界：[填写]。实现预览与显式应用，逐个传递路径参数。应用前重验当前状态；如果无法满足“只提交选定内容并保留其他暂存”的契约，停下给出原因。
+
+### 第 3 轮 · 验证实际提交
+
+在临时仓库放入其他已暂存文件、同一文件的工作区变化和空格路径。核对新提交的实际差异、提交前后索引及未暂存内容。报告无差异或提交失败时的状态。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 定义提交边界</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 定义提交边界">复制本轮</button>
+      </div>
+      <pre class="prompt-body">材料：[仓库、目标文件、提交说明]。先检查工作区和暂存区，核对同时有暂存与未暂存改动的文件。设计预览，说明预计提交的内容及如何保留已有暂存项，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现受控提交</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现受控提交">复制本轮</button>
+      </div>
+      <pre class="prompt-body">授权的文件和内容边界：[填写]。实现预览与显式应用，逐个传递路径参数。应用前重验当前状态；如果无法满足“只提交选定内容并保留其他暂存”的契约，停下给出原因。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验证实际提交</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验证实际提交">复制本轮</button>
+      </div>
+      <pre class="prompt-body">在临时仓库放入其他已暂存文件、同一文件的工作区变化和空格路径。核对新提交的实际差异、提交前后索引及未暂存内容。报告无差异或提交失败时的状态。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>把选定修复提交移到维护分支</h2>
+  <p>按顺序应用修复，冲突时保留可靠的恢复入口。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把选定修复提交移到维护分支">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把选定修复提交移到维护分支">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发修复回移辅助工具。输入 [仓库、维护分支、有序提交清单、验收命令]。先只读核对目标起点、提交依赖、重复或等价改动及当前工作区。授权后在指定隔离工作环境按顺序应用。冲突或验证失败时停止，列出成功映射、当前提交、未处理项和继续或取消前应核对什么。用临时仓库模拟第二个提交冲突并验证原工作状态。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>把合并冲突整理成可复查的解决记录</h2>
+  <p>记录两边行为及解决后的验证证据。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把合并冲突整理成可复查的解决记录">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把合并冲突整理成可复查的解决记录">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发合并冲突辅助流程。输入 [正在处理的仓库、合并双方、相关验收]。先提取冲突文件、共同起点与两侧差异，并记录每处要保留的业务语义和需人决定的选择。只应用已授权的解决方案，验证受影响入口。用一处文本冲突和一处需要业务判断的冲突演练，确认结果包含处理前证据、解决依据和实际验证记录。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>从已核对的提交准备发布标签</h2>
+  <p>把版本号、目标提交与投产证据连在一起。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从已核对的提交准备发布标签">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：从已核对的提交准备发布标签">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发本地发布标签准备流程。输入 [仓库、版本号、目标提交、上一个标签与验收记录]。检查要标记的提交、同名标签、发布范围和验收记录绑定，先生成预览。显式授权后创建本地标签并重新解析验证。用临时仓库覆盖正常、同名冲突、验收记录对应不同提交三种场景。将标签推送留作单独授权。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>扫描多个 Java 服务仓库的交付状态</h2>
+  <p>一次汇总各服务的工作区、分支差异和待交付提交。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：扫描多个 Java 服务仓库的交付状态">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：扫描多个 Java 服务仓库的交付状态">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发只读批量仓库状态报告。输入 [服务名、仓库路径、交付基准列表]。每个仓库给出当前分支或游离状态、未提交变化、基准解析结果、领先落后和待交付提交。错误按仓库隔离，汇总清楚成功和失败数量。用正常仓库、缺目录、无基准仓库和路径含空格的仓库验证。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

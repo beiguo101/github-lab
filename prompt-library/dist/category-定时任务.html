@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>定时任务 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>定时任务</h1>
+    <p>12 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>每天定时生成一份项目摘要</h2>
+  <p>为已有项目摘要脚本接上可验证的每日运行入口。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：每天定时生成一份项目摘要">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：每天定时生成一份项目摘要">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>给现有摘要脚本 [入口] 接入目标机器已有调度器 [名称或配置]。输入 [固定时间和时区]、[按天组织的材料目录]、[输出位置]。把计划日期传给业务入口，以计划日期命名产物。先提供配置预览与本地试跑，实际启用需要授权。用有数据和无数据两天的模拟时间验收，空结果有清楚标记。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>扫描新到的文件并生成处理清单</h2>
+  <p>区分准备完成、等待写完与已处理文件。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：扫描新到的文件并生成处理清单">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：扫描新到的文件并生成处理清单">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发周期扫描任务。输入 [目录、匹配规则、完成标志或稳定时间、已处理记录]，输出待处理文件清单和等待原因。优先使用明确完成标志；若采用稳定时间，则把判据写进验收。生成清单和确认处理完成是两步。用已写完、新文件仍在写、已处理文件和同名新版本验收。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>为定时脚本增加手动试跑入口</h2>
+  <p>用同一处理入口验证配置和计划执行。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：为定时脚本增加手动试跑入口">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：为定时脚本增加手动试跑入口">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>给现有定时脚本增加手动入口。输入 [任务名、配置文件和可选计划日期]。校验工作目录、输入和输出路径，预览试跑将使用哪些参数。试跑用临时输出，不写正式运行记录；实际计划触发与手动试跑共用处理入口。用路径填错、日期非法和有效试跑验收，错误能定位到具体配置项。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>为每次运行生成可查日志</h2>
+  <p>分辨成功、空结果、失败和未运行。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：为每次运行生成可查日志">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：为每次运行生成可查日志">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>给定任务入口 [路径]、计划触发时间和产物规则，设计结构化运行记录，包含任务名、计划时间、实际起止、运行标识、结果和产物路径。错误只保存可诊断且已脱敏的摘要。用成功、有输入但正常空结果、执行失败和根本未启动的样例验证；同时记录运行日志的位置与检查方式。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>管理任务的启用、停用和运行状态</h2>
+  <p>使用现有调度器，保证重复启用不会产生双任务。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：管理任务的启用、停用和运行状态">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：管理任务的启用、停用和运行状态">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 核实目标环境
+
+输入 [操作系统、已有调度器、任务入口和权限]。先只读确认该任务的标识、当前状态和可用动作。提出预览、启用、停用、查看和手动执行的接口。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现管理入口
+
+确认使用的调度器和授权范围：[填写]。支持预览及获准操作，给每次变更前后状态。对同一任务重复启用应保持一份计划，停用只影响该任务的新触发。
+
+### 第 3 轮 · 验收启停
+
+在临时环境或调度器替身验证初次启用、再次启用、停用、已停用及读取状态失败。列出与目标机器实测之间仍有差异的部分。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 核实目标环境</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 核实目标环境">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [操作系统、已有调度器、任务入口和权限]。先只读确认该任务的标识、当前状态和可用动作。提出预览、启用、停用、查看和手动执行的接口。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现管理入口</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现管理入口">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认使用的调度器和授权范围：[填写]。支持预览及获准操作，给每次变更前后状态。对同一任务重复启用应保持一份计划，停用只影响该任务的新触发。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验收启停</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验收启停">复制本轮</button>
+      </div>
+      <pre class="prompt-body">在临时环境或调度器替身验证初次启用、再次启用、停用、已停用及读取状态失败。列出与目标机器实测之间仍有差异的部分。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>防止同一个任务重叠运行</h2>
+  <p>把重叠触发变成可解释的跳过或排队。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：防止同一个任务重叠运行">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：防止同一个任务重叠运行">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确定重叠策略
+
+输入 [任务及部署方式]。确认锁的粒度、单机或多机边界，及上一轮仍运行时跳过还是排队。说明异常退出后如何检查能否恢复。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现占用判定
+
+授权范围和选择：[填写]。在目标环境采用兼容机制取得运行权，记录运行标识和冲突结果。完成或异常结束时按约定释放。
+
+### 第 3 轮 · 验证并发与恢复
+
+用本地两个同时触发的进程验证实际处理次数、跳过或排队记录。额外模拟持锁进程退出，检查超时或恢复分支有证据可查。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确定重叠策略</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确定重叠策略">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [任务及部署方式]。确认锁的粒度、单机或多机边界，及上一轮仍运行时跳过还是排队。说明异常退出后如何检查能否恢复。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现占用判定</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现占用判定">复制本轮</button>
+      </div>
+      <pre class="prompt-body">授权范围和选择：[填写]。在目标环境采用兼容机制取得运行权，记录运行标识和冲突结果。完成或异常结束时按约定释放。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验证并发与恢复</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验证并发与恢复">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用本地两个同时触发的进程验证实际处理次数、跳过或排队记录。额外模拟持锁进程退出，检查超时或恢复分支有证据可查。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>限制超时，并只重试暂时失败</h2>
+  <p>按失败类型决定是否重试并记录最终结果。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：限制超时，并只重试暂时失败">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：限制超时，并只重试暂时失败">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 定义失败策略
+
+输入 [任务入口、超时时间、错误类型、最大尝试次数]。确认暂时失败、不可重试输入错误及取消后如何验证产物状态。列出控制总运行时间的方案。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现超时和重试
+
+确认策略：[填写]。实现逐次超时、有限重试与间隔，记录每次原因和最终结果。开始重试前确保前一次已停止或已按约定清理。
+
+### 第 3 轮 · 模拟验证
+
+用本地模拟任务覆盖首次超时后成功、输入错误、重试耗尽三种情况。核对尝试次数、最后状态和部分产物是否按规则处理。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 定义失败策略</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 定义失败策略">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [任务入口、超时时间、错误类型、最大尝试次数]。确认暂时失败、不可重试输入错误及取消后如何验证产物状态。列出控制总运行时间的方案。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现超时和重试</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现超时和重试">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认策略：[填写]。实现逐次超时、有限重试与间隔，记录每次原因和最终结果。开始重试前确保前一次已停止或已按约定清理。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 模拟验证</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 模拟验证">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用本地模拟任务覆盖首次超时后成功、输入错误、重试耗尽三种情况。核对尝试次数、最后状态和部分产物是否按规则处理。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>按工作日和时间窗口执行任务</h2>
+  <p>明确时区、节假日和允许执行的边界。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：按工作日和时间窗口执行任务">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：按工作日和时间窗口执行任务">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认日历规则
+
+输入 [时区、运行窗口、工作日和节假日来源]。定义窗口端点、跨午夜的归属、特殊日期覆盖和日历缺失时的行为。给出可比较的日期样例，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 接入执行条件
+
+确认规则与现有调度方式：[填写]。开发接收计划时刻的执行判断，明确触发、跳过和需人工核对，并记录原因。使用显式输入或兼容的时区方案。
+
+### 第 3 轮 · 验收边界
+
+用模拟时钟复核工作日、周末、特殊日期、恰好到端点和跨午夜场景。适用的时区另验夏令时重复或跳过时刻，记录预期和实际行为。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认日历规则</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认日历规则">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [时区、运行窗口、工作日和节假日来源]。定义窗口端点、跨午夜的归属、特殊日期覆盖和日历缺失时的行为。给出可比较的日期样例，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 接入执行条件</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 接入执行条件">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认规则与现有调度方式：[填写]。开发接收计划时刻的执行判断，明确触发、跳过和需人工核对，并记录原因。使用显式输入或兼容的时区方案。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验收边界</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验收边界">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用模拟时钟复核工作日、周末、特殊日期、恰好到端点和跨午夜场景。适用的时区另验夏令时重复或跳过时刻，记录预期和实际行为。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>按日期补跑漏掉的任务</h2>
+  <p>只补缺失日期，重复执行能识别已完成项。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：按日期补跑漏掉的任务">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：按日期补跑漏掉的任务">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发补跑工具。输入 [日期区间、时区、预期运行日历、原任务入口和已有产物目录]。先输出缺日、证据、可否安全补跑和影响路径；显式应用后按计划日期调用原任务。区分完整、部分生成和正常空结果，重复执行不重新处理已完成日期。用连续三天只缺一天、一个日期已有空结果标记的样例验收。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>发送可去重的失败与恢复通知</h2>
+  <p>用可测试的通知事件保留首报、抑制与恢复。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：发送可去重的失败与恢复通知">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：发送可去重的失败与恢复通知">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发通知事件生成与投递流程。输入 [失败条件、任务和错误标识、抑制时间、已获准的渠道]。定义一次失败事件的去重键、首次通知、重复抑制和恢复触发，保存投递结果与重试状态。在本地替身验证连续三次同类失败随后恢复，明确每一步生成或抑制的消息；真实消息发送另由用户授权。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>把检查、处理、汇总串成可恢复的周期任务</h2>
+  <p>以每日构建报告为例，保留各步可追溯状态。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把检查、处理、汇总串成可恢复的周期任务">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把检查、处理、汇总串成可恢复的周期任务">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发周期流程。输入 [构建报告目录、计划日期、汇总规则和输出位置]，依次检查输入、汇总测试结果、生成交付摘要。每步定义产物、完成标记和可重用条件，记录输入版本与证据路径。模拟汇总失败导致摘要未生成；修正输入后按受影响步骤恢复，不复用已失效产物。用临时目录验收正常、空输入和中断续跑。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>检查任务迟到、漏跑或卡住</h2>
+  <p>用预期日历、运行状态和产物交叉核对。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：检查任务迟到、漏跑或卡住">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：检查任务迟到、漏跑或卡住">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发只读运行核对器。输入 [任务日历、当前时间、容忍窗口、运行日志和预期产物]。定义迟到、漏跑、超时未结束、声明成功但缺产物的判断依据，已知停用和无数据的允许状态单列。用模拟时钟和虚构日志覆盖各类状态，报告包含计划、实际、产物和依据。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

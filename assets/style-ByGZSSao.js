@@ -1,0 +1,1 @@
+import"./lab-shell-C2vSymSt.js";var e=document.querySelector(`#demo-input`),t=document.querySelector(`#demo-status`);document.querySelector(`#demo-action`).onclick=()=>{t.textContent=e.value.trim()?`已读取：${e.value.trim()}`:`请输入示例文字`},document.querySelector(`#demo-reset`).onclick=()=>{e.value=``,t.textContent=`等待操作`};

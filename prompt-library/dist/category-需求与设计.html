@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>需求与设计 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>需求与设计</h1>
+    <p>2 条提示词</p>
+  </header>
+  <article class="prompt">
+  
+  <h2>把模糊需求变成可验收任务</h2>
+  <p>材料齐全时直接出规格，关键条件缺失时先追问，再继续。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把模糊需求变成可验收任务">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把模糊需求变成可验收任务">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请帮我把这项需求整理成可验收的任务。
+
+原始需求：[粘贴原话]
+已知背景或现有行为：[粘贴，可留空]
+
+先用一句话写出你理解的目标，并从已有材料中提取已经确定的要求。
+如果缺少的信息会改变使用者、交付范围或验收结果，只问最多三个关键问题，每个问题说明答案会影响什么，然后等我回答。
+如果材料已经充分，直接形成任务草案。
+
+草案包含使用者和场景、目标、范围内事项、明确排除项、待确认项。
+验收条件统一写成“在什么前提下，执行什么操作，应得到什么结果”。每条都要能被实际观察或检查。</pre>
+    <a class="source" href="https://prompts.chat/prompts/cmlcf50ex000djv04aw3i0la0_prd">参考 · prompts.chat 社区的 PRD 条目</a>
+  </template>
+</article>
+<article class="prompt">
+  
+  <h2>把业务流程写成绘图提示词</h2>
+  <p>把流程说明整理成明确的节点、连接、分支和图中文字。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把业务流程写成绘图提示词">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把业务流程写成绘图提示词">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请把下面的流程说明整理成一份可以直接交给绘图人员或绘图模型的中文绘图提示词。
+
+原始流程：[粘贴]
+读图对象：[谁会看这张图]
+读者看完应能回答：[一个具体问题]
+
+先识别步骤、参与方、交接关系和条件分支。按材料选择版式：顺序为主用流程图，跨角色交接为主用泳道图，两套方案逐项比较用对照图。
+写明节点名称、每个节点的视觉内容、连接方向、分支条件，以及图中允许出现的文字。把作图说明和实际显示的标签分开。
+
+若原文没有说明分支去向或先后顺序，将缺口单列给我确认。最后给出三项针对这张图的核对点，让我能对照原文检查成图。</pre>
+    <a class="source" href="https://yila.ai/scientific-figure-prompts/data-processing-pipeline">参考 · Yila 数据处理流程图</a>
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

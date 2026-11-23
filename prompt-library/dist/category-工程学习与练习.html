@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>工程学习与练习 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>工程学习与练习</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>用一个例子学懂一个工程概念</h2>
+  <p>从实际行为、可运行例子到自我检查。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用一个例子学懂一个工程概念">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：用一个例子学懂一个工程概念">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>想学的概念：[名称]。我的背景：[填写]。可用时间和工具：[填写]。
+
+先解释它在什么情况下需要用，再给一个足够小的可运行例子或手工推演。安排一次主动修改或预测，让我能观察差异。给一条自测题和通过标准，答案放到最后。重要前提或版本差异标出来。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>让 Codex 带我做一次工程练习</h2>
+  <p>先看示范，再自己做，最后按证据点评。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：让 Codex 带我做一次工程练习">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：让 Codex 带我做一次工程练习">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 诊断起点
+
+我想学：[填写]。每次可用时间：[填写]。请用两三个问题了解我的基础，随后给一个在本次时间内能完成的练习和可验收结果。
+
+### 第 2 轮 · 先让我尝试
+
+我的回答和第一版尝试：[填]。请先给一个最有用的提示与下一项检查，保留让我自己作答的部分。我的时间不够时，给出一个可独立完成的小目标。
+
+### 第 3 轮 · 点评并复练
+
+这是最终尝试和运行结果：[填写]。按最初验收点评，解释一个关键错误及其前提。给我一个改变输入或约束的变体，用于验证我能否迁移。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 诊断起点</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 诊断起点">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我想学：[填写]。每次可用时间：[填写]。请用两三个问题了解我的基础，随后给一个在本次时间内能完成的练习和可验收结果。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 先让我尝试</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 先让我尝试">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我的回答和第一版尝试：[填]。请先给一个最有用的提示与下一项检查，保留让我自己作答的部分。我的时间不够时，给出一个可独立完成的小目标。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 点评并复练</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 点评并复练">复制本轮</button>
+      </div>
+      <pre class="prompt-body">这是最终尝试和运行结果：[填写]。按最初验收点评，解释一个关键错误及其前提。给我一个改变输入或约束的变体，用于验证我能否迁移。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>把已有知识迁移到新框架</h2>
+  <p>用熟悉技术和目标技术做可实践的对应。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把已有知识迁移到新框架">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把已有知识迁移到新框架">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>熟悉的技术与版本：[如 Spring Boot 版本]。要学的技术：[填写]。我想能独立完成的任务：[描述]。
+
+以同一个真实行为为主线，建立熟悉概念与新实现的对照，标明哪些对应关系会误导。安排三个递进练习：运行、解释、修改。每个含输入、限制、观察和验收。最后设计一次换场景的迁移练习，检验可独立完成的能力。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

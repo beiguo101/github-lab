@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>意图对齐 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>意图对齐</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>用一段话说清我要什么</h2>
+  <p>适合边界明确的小任务，一轮得到可确认的任务描述。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用一段话说清我要什么">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：用一段话说清我要什么">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>请把以下描述整理为一份可确认的任务简报。本轮停在澄清与规格阶段。
+
+我的原话：[粘贴]
+使用者、场景与期望产物：[填写]
+现有约束或反例：[填写，可留空]
+
+用一句话复述目标，列出明确要求、暂用假设和关键未知。只追问会改变产物或边界的问题，最多三个。最后将可确认的要求写成“给定前提 → 执行动作 → 可观察结果”，并举一个容易被误解的反例。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>三轮达成人与 AI 理解一致</h2>
+  <p>从自然表达出发，逐轮澄清，再确认可执行规格。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：三轮达成人与 AI 理解一致">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：三轮达成人与 AI 理解一致">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 先理解
+
+我的原始需求是：[描述]。背景材料：[有则附上]。本轮只分析。用使用者的语言复述核心意图，指出目标、交付物或适用范围有哪些合理解读，以及每种解读会影响什么。先保留分歧，等我回应。
+
+### 第 2 轮 · 核对事实与未知
+
+这是我的补充：[贴补充]。整理核心意图、已确认事实、具体行为要求、约束、排除项。把模型推断标为假设，最多列三个需要我决定的未知。能由已给材料回答的问题直接注明依据。本轮仍停在分析。
+
+### 第 3 轮 · 确认行为与验收
+
+我的决定是：[填答案或明确接受的假设]。请写最小执行规格，逐条给出触发前提、行为、预期结果与验收证据。至少覆盖主路径和一个边界场景。仍有会改变范围的未知时单列出来，等待我的实施授权。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 先理解</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 先理解">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我的原始需求是：[描述]。背景材料：[有则附上]。本轮只分析。用使用者的语言复述核心意图，指出目标、交付物或适用范围有哪些合理解读，以及每种解读会影响什么。先保留分歧，等我回应。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 核对事实与未知</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 核对事实与未知">复制本轮</button>
+      </div>
+      <pre class="prompt-body">这是我的补充：[贴补充]。整理核心意图、已确认事实、具体行为要求、约束、排除项。把模型推断标为假设，最多列三个需要我决定的未知。能由已给材料回答的问题直接注明依据。本轮仍停在分析。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 确认行为与验收</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 确认行为与验收">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我的决定是：[填答案或明确接受的假设]。请写最小执行规格，逐条给出触发前提、行为、预期结果与验收证据。至少覆盖主路径和一个边界场景。仍有会改变范围的未知时单列出来，等待我的实施授权。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>用反例检查双方是否理解一致</h2>
+  <p>适合多方意见、口头需求或同一说法可实现成不同产品的情形。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用反例检查双方是否理解一致">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：用反例检查双方是否理解一致">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>材料：[原始消息、现有行为、已确认决定]。先把需求拆为用户要改变的行为、必须保留的行为和各方约束，为每条附上出处。选出最多三处会导致不同实现的歧义。
+
+对每处歧义构造两个同输入、不同结果的具体例子，请我选择预期结果。对可逆的小决策标明你的默认建议。收到决定后，更新验收条件与非目标，并列出哪些选择需要在交接时特别说明。当前轮交付问题和反例。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

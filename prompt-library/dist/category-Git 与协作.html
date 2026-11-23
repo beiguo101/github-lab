@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>Git 与协作 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>Git 与协作</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>把 Git 改动整理成 PR 说明</h2>
+  <p>生成审查者能快速理解的改动说明。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把 Git 改动整理成 PR 说明">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把 Git 改动整理成 PR 说明">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>分支、对比基准或 diff：[填写]。关联需求：[材料]。测试结果：[粘贴]。
+
+用简短说明写清变更目的、影响范围、可观察行为、验证方式和剩余事项。把测试按确实已跑、尚待确认列出。给出一份可编辑的 PR 正文，并指出审查者最值得先读的一个文件。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>梳理分支差异与冲突</h2>
+  <p>先读分歧，后按语义解决，再跑验证。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：梳理分支差异与冲突">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：梳理分支差异与冲突">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 理解分歧
+
+当前分支与目标基准：[填写]。先查看状态、共同基准和双方关键变更。区分同处编辑、概念冲突和无关改动，保留本地已有工作。
+
+### 第 2 轮 · 明确合并语义
+
+我确认的保留规则和授权范围：[填写]。逐个处理冲突，说明保留的业务行为。遇到无法同时满足的规则时保留证据等我决定。
+
+### 第 3 轮 · 验收结果
+
+核对合并前后涉及的入口、测试与提交差异。报告解决的冲突、保留的改动和实际验证结果，准备可供维护者复查的记录。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 理解分歧</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 理解分歧">复制本轮</button>
+      </div>
+      <pre class="prompt-body">当前分支与目标基准：[填写]。先查看状态、共同基准和双方关键变更。区分同处编辑、概念冲突和无关改动，保留本地已有工作。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 明确合并语义</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 明确合并语义">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我确认的保留规则和授权范围：[填写]。逐个处理冲突，说明保留的业务行为。遇到无法同时满足的规则时保留证据等我决定。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验收结果</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验收结果">复制本轮</button>
+      </div>
+      <pre class="prompt-body">核对合并前后涉及的入口、测试与提交差异。报告解决的冲突、保留的改动和实际验证结果，准备可供维护者复查的记录。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>把一个大改动拆成可审查的 PR</h2>
+  <p>适合跨度较大且希望保持每个阶段都能运行的需求。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把一个大改动拆成可审查的 PR">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把一个大改动拆成可审查的 PR">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>改动目标、现有分支及基准：[填写]。必须满足的发布与验证约束：[填写]。
+
+按审查者能独立判断的行为拆分。为每个 PR 列目标、依赖、包含路径、验收和回退方式。指出同时调整会阻断独立交付的文件，并提出最小的拆分顺序。每步保留可运行版本和可核查结果，写明中间状态的行为边界。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

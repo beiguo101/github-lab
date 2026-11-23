@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>提示词评估与迭代 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>提示词评估与迭代</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>检查一条提示词是否能真正使用</h2>
+  <p>找出歧义、缺上下文和不可验收的产出要求。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：检查一条提示词是否能真正使用">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：检查一条提示词是否能真正使用">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>现有提示词：[粘贴]。目标使用场景与预期结果：[填写]。
+
+检查角色、输入、必须保留的事实、输出格式和失败情况下的行为。给出最可能产生错误的一种输入，为它写明期望答案。建议必要的最小修订，最后提供一份可直接复制的版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>用失败样例迭代一条提示词</h2>
+  <p>先定质量判据，再比较多个版本。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用失败样例迭代一条提示词">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：用失败样例迭代一条提示词">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 固定样例
+
+任务和当前提示词：[粘贴]。请设计一个常规例和一个容易误判的例，对每个写清必须保留的事实、必答内容、允许变化的表达及失败判据。
+
+### 第 2 轮 · 对照实际输出
+
+同一模型和输入下的两版输出：[粘贴]。逐项对照既定判据，标明证据，找出改动带来的真实收益和仍存在的问题。
+
+### 第 3 轮 · 最小修订
+
+根据失败点提出只改一个关键因素的版本，说明如何用同一组输入再验证。给出修订后的完整可复制正文和变更记录。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 固定样例</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 固定样例">复制本轮</button>
+      </div>
+      <pre class="prompt-body">任务和当前提示词：[粘贴]。请设计一个常规例和一个容易误判的例，对每个写清必须保留的事实、必答内容、允许变化的表达及失败判据。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 对照实际输出</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 对照实际输出">复制本轮</button>
+      </div>
+      <pre class="prompt-body">同一模型和输入下的两版输出：[粘贴]。逐项对照既定判据，标明证据，找出改动带来的真实收益和仍存在的问题。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 最小修订</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 最小修订">复制本轮</button>
+      </div>
+      <pre class="prompt-body">根据失败点提出只改一个关键因素的版本，说明如何用同一组输入再验证。给出修订后的完整可复制正文和变更记录。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>为高频提示词建立回归评估</h2>
+  <p>适合反复用于团队工作、需要比较同一任务不同版本。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：为高频提示词建立回归评估">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：为高频提示词建立回归评估">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>提示词版本、目标模型与允许数据：[填写]。可公开或虚构案例：[粘贴]。
+
+先定义通用硬性判据，例如保留数字和表达不确定性，再针对任务定义按例判断的通过条件。设计正常、冲突、缺失上下文、格式边界各一例。同输入比较版本，记录模型设置、输出和独立证据。区分改善、退化与无法判断，并写何时采用新版本或恢复旧版本。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

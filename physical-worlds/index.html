@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="十二件可以旋转、拆解和重组的 Three.js 交互作品。">
+  <title>可触摸的物理 · 贝果的实验室</title>
+  <script type="module" crossorigin src="../assets/index-DAi5DjYq.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/lab-shell-C2vSymSt.js">
+  <link rel="modulepreload" crossorigin href="../assets/OrbitControls-C5o3xpnH.js">
+  <link rel="stylesheet" crossorigin href="../assets/lab-shell-D4rnwMMI.css">
+  <link rel="stylesheet" crossorigin href="../assets/index-vJTcXqRa.css">
+</head>
+<body data-lab-page="tool">
+<main class="exhibition">
+  <header class="exhibition-intro">
+    <div>
+      <p class="eyebrow mono">AFTER THE LAST SECOND</p>
+      <h1>可触摸的物理</h1>
+      <p class="lead">十二处遗构，从纪元基准塔到再造港。可以绕行、近看结构，也可以让装置运转。</p>
+    </div>
+    <a class="button exhibition-jump" href="#episode-list">浏览十二期 <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <div class="exhibition-layout">
+    <section class="exhibit" aria-labelledby="exhibit-title">
+      <div class="stage" id="stage">
+        <div class="stage-heading">
+          <span class="stage-kicker mono" id="stage-chapter"></span>
+          <div class="stage-name"><span class="stage-index mono" id="stage-index" aria-hidden="true"></span><h2 id="exhibit-title"></h2></div>
+          <span class="stage-subtitle mono" id="stage-subtitle" aria-hidden="true"></span>
+        </div>
+        <div class="stage-tools">
+          <button type="button" id="inspect-structure" aria-pressed="false">近看结构</button>
+          <button type="button" id="ground-view" aria-pressed="false">地面仰视</button>
+          <button type="button" id="pause" aria-pressed="false">暂停动画</button>
+          <button type="button" id="camera-reset">重置视角</button>
+        </div>
+        <p class="stage-guide" id="stage-guide">拖动旋转 · 滚轮或双指缩放</p>
+        <div class="stage-telemetry mono" aria-hidden="true"><span id="stage-signal"></span><span id="stage-progress"></span></div>
+        <p id="stage-error" class="stage-error" role="status" hidden></p>
+      </div>
+      <div class="exhibit-details panel">
+        <div class="exhibit-copy">
+          <h3 id="structure-name"></h3>
+          <p class="structure-scope" id="structure-scope"></p>
+          <p class="transmission" id="transmission"></p>
+          <p id="description"></p>
+        </div>
+        <div class="exhibit-controls" id="scene-controls">
+          <div class="control-label"><label for="adjustment" id="control-name"></label><output for="adjustment" id="control-value" class="mono"></output></div>
+          <input id="adjustment" type="range" min="0" max="100" step="1">
+          <div class="control-label control-ends"><span id="end-start"></span><span id="end-finish"></span></div>
+          <div class="control-row">
+            <button type="button" id="action" class="button-primary"></button>
+            <button type="button" id="reset">重置作品</button>
+            <button type="button" id="capture">保存画面</button>
+          </div>
+        </div>
+      </div>
+      <div class="story-navigation"><button type="button" id="previous-episode">上一期</button><button type="button" id="next-episode">下一期</button></div>
+    </section>
+
+    <aside class="exhibition-index" aria-labelledby="index-title">
+      <h2 id="index-title">航行记录</h2>
+      <nav aria-label="十二期作品" id="episode-list"></nav>
+      <p class="index-note">调整会保存在此浏览器里。「万物寄存处」会读取前面几期留下的状态。</p>
+      <a href="https://github.com/mrdoob/three.js" target="_blank" rel="noopener noreferrer">Three.js 开源项目 ↗</a>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

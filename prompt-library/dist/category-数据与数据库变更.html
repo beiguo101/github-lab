@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>数据与数据库变更 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>数据与数据库变更</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>检查一次数据库字段变更</h2>
+  <p>快速找出旧记录、读取方和部署先后的影响。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：检查一次数据库字段变更">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：检查一次数据库字段变更">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>数据库、版本、表和字段：[填写]。变更目的：[描述]。相关代码或迁移：[路径]。
+
+先核实当前字段定义、读写入口和历史数据假设。列出必填、默认值、空值和旧客户端分别会遇到什么。给出最小迁移顺序，补齐在副本中验证的方法、可观察的通过条件和需要人工确认的实际数据情况。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>把数据变更拆成三轮评估</h2>
+  <p>依次完成影响分析、迁移拟定和验收复核。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把数据变更拆成三轮评估">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：把数据变更拆成三轮评估">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认影响范围
+
+我要变更：[描述]。请只读检查实际数据库迁移与读写路径。列出约束、索引、数据规模未知和共存版本影响，给出需要我确认的问题。
+
+### 第 2 轮 · 拟定迁移
+
+约束与确认结果：[填写]。为每步写出前提、动作、观察信号和继续条件。涉及回填时写清重试和恢复方式。此轮交付迁移草案。
+
+### 第 3 轮 · 核对验收
+
+副本检查或演练结果：[粘贴]。核对记录总数、缺失值、关键约束、旧版读写和新功能。说明回退边界与证据，明确由谁确认实际执行。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认影响范围</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认影响范围">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我要变更：[描述]。请只读检查实际数据库迁移与读写路径。列出约束、索引、数据规模未知和共存版本影响，给出需要我确认的问题。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 拟定迁移</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 拟定迁移">复制本轮</button>
+      </div>
+      <pre class="prompt-body">约束与确认结果：[填写]。为每步写出前提、动作、观察信号和继续条件。涉及回填时写清重试和恢复方式。此轮交付迁移草案。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 核对验收</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 核对验收">复制本轮</button>
+      </div>
+      <pre class="prompt-body">副本检查或演练结果：[粘贴]。核对记录总数、缺失值、关键约束、旧版读写和新功能。说明回退边界与证据，明确由谁确认实际执行。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>设计可中断的线上迁移</h2>
+  <p>针对多版本共存、历史数据回填和恢复边界。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：设计可中断的线上迁移">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：设计可中断的线上迁移">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>老版本与新版本：[说明]。规模、写入速率、窗口与留存要求：[填写]。旧数据条件：[材料]。
+
+按准备、回填、切换与收尾给出渐进设计，指出阶段之间读写兼容如何维持。为批次定义唯一定位、幂等条件、恢复游标、限速判据和对账规则。标出锁或执行时间尚缺证据的部分，给出代表性副本演练方案。把可以回退的截止点及不可逆步骤单独交给负责人确认。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

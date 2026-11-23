@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>文档与知识沉淀 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>文档与知识沉淀</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>让接手者能按 README 跑起来</h2>
+  <p>从真实配置提取启动和验证所需信息。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：让接手者能按 README 跑起来">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：让接手者能按 README 跑起来">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>项目：[路径]。目标读者、操作系统：[填写]。请检查当前可用入口、依赖与配置。
+
+给一段可独立使用的 README 说明，覆盖前置条件、最小配置、启动、正常信号和常见失败。命令与路径跟仓库一致，示例配置使用占位符。说明哪些步骤实际验证过，哪些由现有配置推得。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>从操作记录整理可信的团队文档</h2>
+  <p>先提炼，再让接手者验证，再定稿。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从操作记录整理可信的团队文档">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：从操作记录整理可信的团队文档">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 整理初稿
+
+记录、日志和源码：[材料]。按准备、执行、确认、恢复整理说明。保留真实命令、路径与可观察成功信号，标出仍待确认的地方。
+
+### 第 2 轮 · 用反馈修订
+
+读者实测与卡点：[填写]。找出步骤中被隐含的前提、容易误填的字段和异常分支。只改需要补足的地方，标出需要维护者裁定的差异。
+
+### 第 3 轮 · 交付定稿
+
+对照已确认的过程重新核对示例、路径与术语。输出可直接放入仓库的 Markdown，以及尚未验证的环境说明。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 整理初稿</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 整理初稿">复制本轮</button>
+      </div>
+      <pre class="prompt-body">记录、日志和源码：[材料]。按准备、执行、确认、恢复整理说明。保留真实命令、路径与可观察成功信号，标出仍待确认的地方。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 用反馈修订</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 用反馈修订">复制本轮</button>
+      </div>
+      <pre class="prompt-body">读者实测与卡点：[填写]。找出步骤中被隐含的前提、容易误填的字段和异常分支。只改需要补足的地方，标出需要维护者裁定的差异。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 交付定稿</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 交付定稿">复制本轮</button>
+      </div>
+      <pre class="prompt-body">对照已确认的过程重新核对示例、路径与术语。输出可直接放入仓库的 Markdown，以及尚未验证的环境说明。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>把项目争论沉淀为可检索的决定</h2>
+  <p>适合跨会话、多人推进或反复被问到的取舍。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把项目争论沉淀为可检索的决定">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把项目争论沉淀为可检索的决定">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>讨论、决议和证据材料：[粘贴]。相关模块：[填写]。
+
+为每个有实际影响的决定，写背景、决定日期、责任角色、已确认结论、原因、替代方案及重新考虑的条件。保留稳定的代码位置或议题链接。区分提议、已接受、已实施和已验证，提取可直接形成后续任务的未完成事项。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

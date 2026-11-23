@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>测试设计与验收 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>测试设计与验收</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>把一个行为变成最小测试矩阵</h2>
+  <p>覆盖常用、边界和容易退化的输入。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把一个行为变成最小测试矩阵">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：把一个行为变成最小测试矩阵">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>要验证的行为：[填写]。现有测试框架与样例：[路径或材料]。
+
+按“输入、调用路径、预期结果、可观察断言”给出最小测试矩阵，覆盖正常与一个实质边界。若涉及已有输入，加入兼容场景。逐项解释它防止哪类回归，标明现有用例已经覆盖的部分。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>从测试设计到结果归因</h2>
+  <p>适合先审查要测什么，再运行或补充测试。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从测试设计到结果归因">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：从测试设计到结果归因">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 设计用例
+
+验收条款：[列表]。检查现有测试和入口，映射到每一条，指出真正缺失的验证。给出最小补测提案，等我确认。
+
+### 第 2 轮 · 执行验证
+
+已确认路径和授权：[填写]。运行现有检查和指定用例，需要新增用例时沿用现有框架。给出运行命令、环境、通过项和首个失败证据。
+
+### 第 3 轮 · 解释剩余风险
+
+把失败标为实现行为不符、环境问题或断言有误，给出依据。哪些验收还要人工确认，分别给最小输入和通过信号。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 设计用例</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 设计用例">复制本轮</button>
+      </div>
+      <pre class="prompt-body">验收条款：[列表]。检查现有测试和入口，映射到每一条，指出真正缺失的验证。给出最小补测提案，等我确认。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 执行验证</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 执行验证">复制本轮</button>
+      </div>
+      <pre class="prompt-body">已确认路径和授权：[填写]。运行现有检查和指定用例，需要新增用例时沿用现有框架。给出运行命令、环境、通过项和首个失败证据。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 解释剩余风险</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 解释剩余风险">复制本轮</button>
+      </div>
+      <pre class="prompt-body">把失败标为实现行为不符、环境问题或断言有误，给出依据。哪些验收还要人工确认，分别给最小输入和通过信号。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>为重试、并发和兼容性设计测试</h2>
+  <p>适合可失败、可重复或可并发的状态变更。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：为重试、并发和兼容性设计测试">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：为重试、并发和兼容性设计测试">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>入口与状态：[描述]。保证条件：[已确认契约]。现有测试：[路径]。
+
+列出重点不变量，为每项设计一条能区分正确与错误实现的场景。优先覆盖部分成功后重试、重复提交、现有数据兼容或两个请求交错，将不适用项说明依据后划去。指出可控制的时间与故障点，使用可确定的断言。最后按风险和成本排序，写下运行方式与通过标准。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

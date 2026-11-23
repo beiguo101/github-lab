@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用一张照片，给小城换色 · 贝果的实验室</title>
+  <script type="module" crossorigin src="../assets/index-DdCYfwMg.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/lab-shell-C2vSymSt.js">
+  <link rel="modulepreload" crossorigin href="../assets/extract-palette-fjI19uAT.js">
+  <link rel="modulepreload" crossorigin href="../assets/OrbitControls-C5o3xpnH.js">
+  <link rel="stylesheet" crossorigin href="../assets/lab-shell-D4rnwMMI.css">
+  <link rel="stylesheet" crossorigin href="../assets/index-C0CAtBpH.css">
+</head>
+<body data-lab-page="tool">
+<main>
+  <header class="page-intro">
+    <h1>用一张照片，给小城换色</h1>
+    <p class="lead">选晚霞或海面，从同一张照片提取两套配色。小城会跟着换色，拖动它可以从不同角度比较。</p>
+  </header>
+  <div class="experiment-grid">
+    <section class="panel" aria-labelledby="photo-heading">
+      <h2 id="photo-heading">从照片取色</h2>
+      <div class="experiment-image">
+        <img id="sample-photo" src="../assets/sunset-qHruWFcl.jpg" alt="海上日落，地平线上有橙色晚霞，左下角是偏蓝的海面" width="960" height="720">
+        <div id="sample-region" aria-hidden="true" hidden></div>
+      </div>
+      <div class="experiment-actions" role="group" aria-label="选取照片区域">
+        <button id="sky" type="button" aria-pressed="false">取晚霞</button>
+        <button id="sea" type="button" aria-pressed="false">取海面</button>
+      </div>
+      <p class="experiment-credit">摄影 · <a href="https://commons.wikimedia.org/wiki/File:Blue-Orange_Gradient_Sunset.jpg">The People's Internet，CC0</a></p>
+    </section>
+    <section class="panel" aria-labelledby="city-heading">
+      <h2 id="city-heading">小城的配色</h2>
+      <div id="city" class="experiment-image">
+        <p id="render-error" role="status" hidden>当前浏览器无法绘制 3D 场景。仍可查看下方提取的颜色。</p>
+      </div>
+      <dl id="colors" aria-label="从选区提取的场景基础色"></dl>
+      <div class="experiment-actions" role="group" aria-label="场景视角">
+        <button id="turn" type="button">转动视角</button>
+        <button id="reset" type="button">重置视角</button>
+      </div>
+    </section>
+  </div>
+  <p id="status" role="status">正在载入示例照片…</p>
+  <p class="experiment-credit">照片在浏览器内取色。来源见 <a href="https://github.com/lokesh/color-thief">Color Thief</a> 和 <a href="https://github.com/mrdoob/three.js">Three.js</a>。</p>
+</main>
+</body>
+</html>

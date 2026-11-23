@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>AI 协作与会话交接 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>AI 协作与会话交接</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>换一个会话也能继续原任务</h2>
+  <p>把已确认、已完成、待办和验证恢复到同一上下文。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：换一个会话也能继续原任务">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：换一个会话也能继续原任务">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>上轮记录或工作区位置：[材料]。接下来想完成：[目标]。
+
+请恢复任务上下文，核实目前相关文件与改动。如果历史与实际状态不符，按证据记录差异。列已完成、正在做、剩余决策与上次验证。最后从第一个可验证的未完成步骤接续，授权范围不清时只提交接续建议。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>用第二轮对话独立检查第一轮成果</h2>
+  <p>适合把工程实现和评审交给独立会话。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用第二轮对话独立检查第一轮成果">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：用第二轮对话独立检查第一轮成果">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 形成可复查交接
+
+目标、验收与改动：[材料]。整理一份评审交接，列出授权范围、文件位置、已运行检查和已知限制。保留原始证据和可复现入口。
+
+### 第 2 轮 · 独立审查
+
+你负责独立审查。[粘贴交接、可读仓库位置]。先核实验收和 diff，再给事实与发现。将交接中的结论当作待核对材料，为每条判断附自己的依据。
+
+### 第 3 轮 · 归并分歧
+
+实施结论和独立审查：[粘贴]。将一致、证据冲突、偏好取舍分开，提供解决分歧所需的最小检查，并列出需要维护者决定的事项。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 形成可复查交接</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 形成可复查交接">复制本轮</button>
+      </div>
+      <pre class="prompt-body">目标、验收与改动：[材料]。整理一份评审交接，列出授权范围、文件位置、已运行检查和已知限制。保留原始证据和可复现入口。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 独立审查</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 独立审查">复制本轮</button>
+      </div>
+      <pre class="prompt-body">你负责独立审查。[粘贴交接、可读仓库位置]。先核实验收和 diff，再给事实与发现。将交接中的结论当作待核对材料，为每条判断附自己的依据。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 归并分歧</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 归并分歧">复制本轮</button>
+      </div>
+      <pre class="prompt-body">实施结论和独立审查：[粘贴]。将一致、证据冲突、偏好取舍分开，提供解决分歧所需的最小检查，并列出需要维护者决定的事项。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>为多个 AI 会话设计分工和验收边界</h2>
+  <p>适合独立分析、实现、审查和人工决策分开的工作。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：为多个 AI 会话设计分工和验收边界">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：为多个 AI 会话设计分工和验收边界">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>目标、可用会话和授权范围：[填写]。共享的事实材料与工作区：[填写]。
+
+将工作拆为有明确输入、输出和验收的角色任务。区分可并行的只读工作与会写同一资源的工作，给出必要的串行交接点。为每个角色写一段可复制指令，包含可访问材料、允许动作、停止条件、证据格式和异常反馈。末尾列出冲突时怎么决策，以及最终验收由谁负责。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

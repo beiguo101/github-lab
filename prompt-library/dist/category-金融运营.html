@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>金融运营 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>金融运营</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>一类对账差异处理</h2>
+  <p>退款差异按编号匹配原单，例外进入人工核查。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：一类对账差异处理">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：一类对账差异处理">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 按编号核对原单
+
+输入：[脱敏退款差异单、原单和流水导出、已确认的交易编号与匹配规则]。依据确定性规则核对编号、方向、金额与币种，按唯一匹配、无匹配、多匹配分类。保留引用或源行号，金额以输入与程序核对结果为准。
+
+### 第 2 轮 · 整理证据与分派建议
+
+输入：[实际匹配结果、核对规则、可参考的历史流程记录]。按差异编号整理原单与流水证据、已确认差异和待核查项。无原单、多条候选或口径冲突的记录交人工核查，列需补充的证据。按已确认规则给出责任队列。
+
+### 第 3 轮 · 记录复核结论
+
+输入：[复核人的决定、补证和处理记录]。逐项回写结论和依据。待核查项保留状态、负责人和复查时间；有可追溯人工结论和证据时生成关闭记录。涉及资金变动的决定由获准人员确认并按现行流程办理。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 按编号核对原单</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 按编号核对原单">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[脱敏退款差异单、原单和流水导出、已确认的交易编号与匹配规则]。依据确定性规则核对编号、方向、金额与币种，按唯一匹配、无匹配、多匹配分类。保留引用或源行号，金额以输入与程序核对结果为准。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 整理证据与分派建议</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 整理证据与分派建议">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[实际匹配结果、核对规则、可参考的历史流程记录]。按差异编号整理原单与流水证据、已确认差异和待核查项。无原单、多条候选或口径冲突的记录交人工核查，列需补充的证据。按已确认规则给出责任队列。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 记录复核结论</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 记录复核结论">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[复核人的决定、补证和处理记录]。逐项回写结论和依据。待核查项保留状态、负责人和复查时间；有可追溯人工结论和证据时生成关闭记录。涉及资金变动的决定由获准人员确认并按现行流程办理。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>日终批次完整性检查</h2>
+  <p>逐批核对预期、到达和处理结果，保留复检记录。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：日终批次完整性检查">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：日终批次完整性检查">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 锁定核验口径
+
+输入：[业务日期、时区、检查时间、预期批次清单、实际到达记录与处理状态]。核对批次匹配键及重跑编号，先确认迟到阈值和成功判据。根据程序比对结果列已到达成功、缺批、迟到、失败和状态未知，附数据出处。
+
+### 第 2 轮 · 分派异常并安排复检
+
+输入：[核验结果、责任表与处置规则]。将缺批、迟到和失败逐项转成处理单，注明原始证据、责任人、下次复查时间及复检应看到的结果。区分确实未到和缺少到达证据。补批或重跑按已授权的现行流程进行。
+
+### 第 3 轮 · 复检与结案
+
+输入：[补到记录、处理结果、复检时间和证据]。用同一份预期清单重新核对，每个批次保留前后状态。只有符合成功判据的批次标为通过；仍缺失、失败或待核查的批次留在待处理清单并明确下次复查。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 锁定核验口径</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 锁定核验口径">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[业务日期、时区、检查时间、预期批次清单、实际到达记录与处理状态]。核对批次匹配键及重跑编号，先确认迟到阈值和成功判据。根据程序比对结果列已到达成功、缺批、迟到、失败和状态未知，附数据出处。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 分派异常并安排复检</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 分派异常并安排复检">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[核验结果、责任表与处置规则]。将缺批、迟到和失败逐项转成处理单，注明原始证据、责任人、下次复查时间及复检应看到的结果。区分确实未到和缺少到达证据。补批或重跑按已授权的现行流程进行。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 复检与结案</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 复检与结案">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[补到记录、处理结果、复检时间和证据]。用同一份预期清单重新核对，每个批次保留前后状态。只有符合成功判据的批次标为通过；仍缺失、失败或待核查的批次留在待处理清单并明确下次复查。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>一项报表指标波动解释</h2>
+  <p>把可计算的变化贡献与待核实原因分开。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：一项报表指标波动解释">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：一项报表指标波动解释">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认是否可比较
+
+输入：[触发阈值、指标定义、前后窗口、渠道或产品分组、程序计算结果]。核对数据是否完整、时间范围与统计口径是否一致。按确认的拆分方法使用程序提供的基线、变化量和贡献值；标注不可比项及缺失证据。
+
+### 第 2 轮 · 组织证据与调查问题
+
+输入：[各维度贡献、数据出处、同期业务事件]。写出哪些维度贡献最大、各自证据是什么，再单列可能原因、待验证证据和负责人。相关事件先记为待核实线索，请业务确认是否能解释变化。
+
+### 第 3 轮 · 形成解释或调查单
+
+输入：[业务复核结果、补充证据]。把已确认原因、仍不确定内容、指标贡献表和数据出处连起来。证据不足时产出调查单，写明待查问题、责任人和复查时间。将解释或调查单关联到原指标告警。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认是否可比较</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认是否可比较">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[触发阈值、指标定义、前后窗口、渠道或产品分组、程序计算结果]。核对数据是否完整、时间范围与统计口径是否一致。按确认的拆分方法使用程序提供的基线、变化量和贡献值；标注不可比项及缺失证据。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 组织证据与调查问题</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 组织证据与调查问题">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[各维度贡献、数据出处、同期业务事件]。写出哪些维度贡献最大、各自证据是什么，再单列可能原因、待验证证据和负责人。相关事件先记为待核实线索，请业务确认是否能解释变化。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 形成解释或调查单</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 形成解释或调查单">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[业务复核结果、补充证据]。把已确认原因、仍不确定内容、指标贡献表和数据出处连起来。证据不足时产出调查单，写明待查问题、责任人和复查时间。将解释或调查单关联到原指标告警。</pre>
+    </section>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

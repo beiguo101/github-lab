@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>了解陌生项目 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>了解陌生项目</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>十分钟认识一个陌生项目</h2>
+  <p>从入口和一条真实使用路径理解仓库。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：十分钟认识一个陌生项目">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：十分钟认识一个陌生项目">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>项目：[目录或仓库 URL]。我最想知道：[问题]。请做一次只读导览。
+
+先查看可用的项目说明、构建清单、入口配置和测试目录。用普通话说明项目解决什么、谁会用、从哪里进入。沿一个最常见的使用场景追踪输入、主要模块和结果，给出关键路径和文件依据。将 README 宣称、源码支持和实际运行验证分别标注。最后给一个最小体验方式及前置条件。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>从认识项目到拿到验证路线</h2>
+  <p>先理解用途，再逐步查入口和限制。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从认识项目到拿到验证路线">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：从认识项目到拿到验证路线">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 看项目全貌
+
+目标仓库：[路径或 URL]。我打算用它做：[场景]。只读检查 README、相关项目规约、目录和构建清单。回答它是什么、能解决我的哪部分问题、哪个入口最可能有关，并标出暂时未知的部分。
+
+### 第 2 轮 · 追一条使用路径
+
+我选这条路径：[用户动作或命令]。从用户输入追到结果，说明入口、核心模块、存储或外部服务、相关测试。提供文件或符号位置。列出最小运行方式及会产生的外部访问或环境改动。
+
+### 第 3 轮 · 核实判断
+
+我的使用条件：[平台、版本、资源]。把能力和限制归到“已确认”“有依据的推测”“仍待验证”，为确认项注明来源。针对一个最影响选择的未知给出最小验证步骤、预期现象和失败后的判断。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 看项目全貌</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 看项目全貌">复制本轮</button>
+      </div>
+      <pre class="prompt-body">目标仓库：[路径或 URL]。我打算用它做：[场景]。只读检查 README、相关项目规约、目录和构建清单。回答它是什么、能解决我的哪部分问题、哪个入口最可能有关，并标出暂时未知的部分。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 追一条使用路径</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 追一条使用路径">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我选这条路径：[用户动作或命令]。从用户输入追到结果，说明入口、核心模块、存储或外部服务、相关测试。提供文件或符号位置。列出最小运行方式及会产生的外部访问或环境改动。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 核实判断</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 核实判断">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我的使用条件：[平台、版本、资源]。把能力和限制归到“已确认”“有依据的推测”“仍待验证”，为确认项注明来源。针对一个最影响选择的未知给出最小验证步骤、预期现象和失败后的判断。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>判断一个开源项目值不值得接入</h2>
+  <p>用现有项目约束评估复用范围和维护代价。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：判断一个开源项目值不值得接入">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：判断一个开源项目值不值得接入">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>候选仓库：[URL 或路径]。目标项目和使用场景：[描述]。约束：[语言版本、运行环境、许可证要求、数据边界]。
+
+选择最可能适用的官方入口和示例，追到对应代码与测试。按“可直接复用”“需适配”“当前缺口”给结论。核对版本、许可证、传递依赖、数据去向和升级影响。对本库与内置能力的比较只围绕同一使用场景。给出一项小试，写清成功、失败和仍不足以判断的观察。拆出需要我决定的取舍，保留来源路径。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

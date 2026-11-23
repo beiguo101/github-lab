@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>照片色彩分析</title>
+  <script type="module" crossorigin src="../assets/index-Cz6YBzMp.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/lab-shell-C2vSymSt.js">
+  <link rel="modulepreload" crossorigin href="../assets/extract-palette-fjI19uAT.js">
+  <link rel="stylesheet" crossorigin href="../assets/lab-shell-D4rnwMMI.css">
+  <link rel="stylesheet" crossorigin href="../assets/index-sSXHpO_a.css">
+</head>
+<body data-lab-page="tool">
+  <main>
+    <header><p class="eyebrow">PHOTO / PALETTE</p><h1>照片里的五种颜色</h1>
+      <p>上传照片，选取一个矩形，对照全图与局部的色彩。</p>
+    </header>
+    <div class="toolbar">
+      <label class="upload">选择照片<input id="upload" type="file" accept="image/*" /></label>
+      <div class="palettes">
+        <section><h2>全图五色 <small>上传时提取</small></h2><div id="full" class="swatches"><p>等待上传照片</p></div></section>
+        <section><h2>局部五色 <small>选区确认后更新</small></h2><div id="local" class="swatches"><p>等待选取局部区域</p></div></section>
+      </div>
+    </div>
+    <p id="status" role="status" aria-live="polite">照片仅在当前浏览器中处理。</p>
+    <form id="region-form" hidden>
+      <fieldset>
+        <legend>按坐标选区</legend>
+        <p id="region-help">以照片左上角为原点。横向和纵向分别用 0% 到 100% 表示，也可以在照片上拖拽或依次点两角。</p>
+        <div class="region-controls">
+          <label>起点横向 (%) <input name="startX" type="number" min="0" max="100" step="any" value="0" required aria-describedby="region-help"></label>
+          <label>起点纵向 (%) <input name="startY" type="number" min="0" max="100" step="any" value="0" required></label>
+          <label>终点横向 (%) <input name="endX" type="number" min="0" max="100" step="any" value="50" required></label>
+          <label>终点纵向 (%) <input name="endY" type="number" min="0" max="100" step="any" value="100" required></label>
+          <button type="submit">提取局部颜色</button>
+        </div>
+      </fieldset>
+    </form>
+    <div id="stage" hidden>
+      <img id="photo" alt="待分析照片" draggable="false" />
+      <div id="selection" aria-hidden="true" hidden></div>
+    </div>
+    <p class="note">色卡下方为 HEX 色值；相邻位置不代表颜色一一对应。颜色较少或透明的区域可能不足五色。</p>
+  </main>
+</body>
+</html>

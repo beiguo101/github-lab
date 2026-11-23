@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>发布与回退 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>发布与回退</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>用一页清单核对发布准备</h2>
+  <p>梳理要发什么、发完怎么看、出现异常找谁。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用一页清单核对发布准备">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：用一页清单核对发布准备">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>目标版本、环境与窗口：[填写]。变更、配置、依赖和测试材料：[粘贴]。
+
+列出发前确认、上线观察和出问题时的停止条件。每项带负责人或待确认、证据来源与通过判据。标出未核实的参数或权限，汇总成可交付负责人的发布检查单。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>分轮完成发布演练与核对</h2>
+  <p>基于实际演练，更新检查、观察和恢复步骤。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：分轮完成发布演练与核对">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：分轮完成发布演练与核对">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 准备演练
+
+发布目标、版本和约束：[填写]。核对构建产物、参数、数据变化和观察指标。给我一个包含通过条件和停止条件的演练草案。
+
+### 第 2 轮 · 记录结果
+
+演练记录：[粘贴]。区分成功信号、异常信号与未覆盖环节，找出会影响放行的差异。根据证据更新检查单。
+
+### 第 3 轮 · 核对恢复方案
+
+恢复测试及结果：[填写]。核对应用、配置和数据各应恢复到什么状态，列出未验证风险和需要谁作放行判断。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 准备演练</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 准备演练">复制本轮</button>
+      </div>
+      <pre class="prompt-body">发布目标、版本和约束：[填写]。核对构建产物、参数、数据变化和观察指标。给我一个包含通过条件和停止条件的演练草案。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 记录结果</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 记录结果">复制本轮</button>
+      </div>
+      <pre class="prompt-body">演练记录：[粘贴]。区分成功信号、异常信号与未覆盖环节，找出会影响放行的差异。根据证据更新检查单。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 核对恢复方案</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 核对恢复方案">复制本轮</button>
+      </div>
+      <pre class="prompt-body">恢复测试及结果：[填写]。核对应用、配置和数据各应恢复到什么状态，列出未验证风险和需要谁作放行判断。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>设计带放行阈值的渐进发布</h2>
+  <p>适合部分流量、分批用户或多环境发布。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：设计带放行阈值的渐进发布">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：设计带放行阈值的渐进发布">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>系统、用户影响范围和可用发布机制：[填写]。最近基线与风险：[材料]。
+
+设计阶段、目标人群、观察时长与通过阈值。把每次放量所需证据、暂停条件、回退触发及恢复验证写进表格。检查代码、部署配置和数据变化能否按同一边界恢复。用验收记录说明有证据的判断，发布由获准人员执行。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

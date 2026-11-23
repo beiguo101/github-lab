@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>业务项目 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>业务项目</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>重复咨询答复</h2>
+  <p>从现行规则生成带出处的答复，方便审阅、发送和回查。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：重复咨询答复">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：重复咨询答复">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 定位当前有效规则
+
+输入：[咨询原文、咨询对象、适用时间与可查规则]。匹配对象、时间和适用条件，逐条标明文档名称、版本、生效日期与条款位置。列出不明信息和冲突。无法确认适用规则时，整理交业务负责人核实的问题。
+
+### 第 2 轮 · 形成答复草稿
+
+输入：[已确认的规则、答复对象和语气]。先给结论，再说明适用条件、用户下一步和依据。对未知条件明确提问，保留可复核来源。交指定人员审阅；只有收到发送授权时才执行发送。
+
+### 第 3 轮 · 登记答复结果
+
+输入：[最终答复、发送或送达记录、咨询编号]。生成回查记录，关联所用规则和版本。已确认送达时可以关闭；只有草稿或发送记录时分别标注实际状态，并记录待确认事项。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 定位当前有效规则</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 定位当前有效规则">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[咨询原文、咨询对象、适用时间与可查规则]。匹配对象、时间和适用条件，逐条标明文档名称、版本、生效日期与条款位置。列出不明信息和冲突。无法确认适用规则时，整理交业务负责人核实的问题。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 形成答复草稿</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 形成答复草稿">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[已确认的规则、答复对象和语气]。先给结论，再说明适用条件、用户下一步和依据。对未知条件明确提问，保留可复核来源。交指定人员审阅；只有收到发送授权时才执行发送。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 登记答复结果</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 登记答复结果">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[最终答复、发送或送达记录、咨询编号]。生成回查记录，关联所用规则和版本。已确认送达时可以关闭；只有草稿或发送记录时分别标注实际状态，并记录待确认事项。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>客户上线交付</h2>
+  <p>从约定范围核查缺项，逐项交接到客户验收。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：客户上线交付">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：客户上线交付">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 核对上线范围
+
+输入：[上线范围、交付清单、获准查阅的邮件与工单]。以最新已确认范围为基准，列已齐备、缺项、证据冲突和范围待确认。每项附材料出处，并指出会阻塞上线的缺项。
+
+### 第 2 轮 · 分派缺项并验证
+
+输入：[责任人、计划补齐时间和已获准的配置变更]。生成跟进表，含交付物、负责人、下次跟进时间与验证方式。逐项回填真实处理证据；配置变更按现有授权和审核流程交接。
+
+### 第 3 轮 · 收集客户验收
+
+输入：[验证结果和客户确认记录]。按约定范围整理客户可用性与验收证据。缺确认或缺项时保留待验收，列责任人和下次跟进时间。全部关键交付得到客户确认后生成关闭记录。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 核对上线范围</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 核对上线范围">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[上线范围、交付清单、获准查阅的邮件与工单]。以最新已确认范围为基准，列已齐备、缺项、证据冲突和范围待确认。每项附材料出处，并指出会阻塞上线的缺项。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 分派缺项并验证</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 分派缺项并验证">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[责任人、计划补齐时间和已获准的配置变更]。生成跟进表，含交付物、负责人、下次跟进时间与验证方式。逐项回填真实处理证据；配置变更按现有授权和审核流程交接。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 收集客户验收</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 收集客户验收">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[验证结果和客户确认记录]。按约定范围整理客户可用性与验收证据。缺确认或缺项时保留待验收，列责任人和下次跟进时间。全部关键交付得到客户确认后生成关闭记录。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>客户反馈到产品决定</h2>
+  <p>让反馈有决定、理由与可追踪的后续结果。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：客户反馈到产品决定">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：客户反馈到产品决定">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 还原原始反馈
+
+输入：[原反馈编号、用户场景、获准查询的已有反馈和需求]。提炼实际问题、频率或影响的已知证据，找出相似事项并说明相似处和差异。把原话、推断与未知分开。
+
+### 第 2 轮 · 辅助产品作决定
+
+输入：[关联事项、产品判断和资源约束]。为合并、试验或暂缓整理选择依据。记录产品负责人的实际决定与理由。决定试验时确定验收指标、跟进人和复查时间；决定合并时关联目标事项。
+
+### 第 3 轮 · 回填并追踪结论
+
+输入：[已确认决定、原反馈记录和试验结果（如有）]。输出可回填的决定、理由与关联证据；获准时回填原反馈。尚未完成的试验写明下次跟进，完成后将结果链接关联回原记录。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 还原原始反馈</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 还原原始反馈">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[原反馈编号、用户场景、获准查询的已有反馈和需求]。提炼实际问题、频率或影响的已知证据，找出相似事项并说明相似处和差异。把原话、推断与未知分开。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 辅助产品作决定</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 辅助产品作决定">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[关联事项、产品判断和资源约束]。为合并、试验或暂缓整理选择依据。记录产品负责人的实际决定与理由。决定试验时确定验收指标、跟进人和复查时间；决定合并时关联目标事项。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 回填并追踪结论</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 回填并追踪结论">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入：[已确认决定、原反馈记录和试验结果（如有）]。输出可回填的决定、理由与关联证据；获准时回填原反馈。尚未完成的试验写明下次跟进，完成后将结果链接关联回原记录。</pre>
+    </section>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>重构与兼容性 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>重构与兼容性</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>界定一次小重构</h2>
+  <p>明确移动什么、保留哪些行为、怎样确认。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：界定一次小重构">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：界定一次小重构">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>目标代码：[路径]。重构原因：[具体维护困难]。必须保留：[入口、输出和失败行为]。
+
+先列出真实调用方与现有测试，说明最小改动的范围和数据边界。草拟一项行为对照检查，给出预期输入输出。将发现的无关清理事项单列。本轮交付方案。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>用前后对照验证重构</h2>
+  <p>先建立基线，改动后逐项回查。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：用前后对照验证重构">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：用前后对照验证重构">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 记录基线
+
+准备重构：[路径与目标]。先读调用点，选正常、边界和失败行为记录实际结果，给出简洁迁移步骤。等我确认实施范围。
+
+### 第 2 轮 · 实施小步
+
+我授权的范围：[填写]。按照基线推进一小步，保留现有入口与契约。每次结构变更后运行对应检查。
+
+### 第 3 轮 · 复核差异
+
+对照最初的行为基线和实际改动，说明哪些行为完全一致、哪些确有变化及原因。报告命令、结果和未覆盖的路径。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 记录基线</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 记录基线">复制本轮</button>
+      </div>
+      <pre class="prompt-body">准备重构：[路径与目标]。先读调用点，选正常、边界和失败行为记录实际结果，给出简洁迁移步骤。等我确认实施范围。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实施小步</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实施小步">复制本轮</button>
+      </div>
+      <pre class="prompt-body">我授权的范围：[填写]。按照基线推进一小步，保留现有入口与契约。每次结构变更后运行对应检查。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 复核差异</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 复核差异">复制本轮</button>
+      </div>
+      <pre class="prompt-body">对照最初的行为基线和实际改动，说明哪些行为完全一致、哪些确有变化及原因。报告命令、结果和未覆盖的路径。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>为多调用方设计渐进迁移</h2>
+  <p>适合替换跨模块接口或移动公共职责。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：为多调用方设计渐进迁移">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：为多调用方设计渐进迁移">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>旧接口与调用方：[材料]。目标接口、兼容窗口：[填写]。
+
+画出迁移顺序，标出依赖与各阶段需要支持的调用方式。仅在确有混用阶段时提出兼容层，并写清移除条件。为每阶段定义可回退边界、可观测信号、验收与负责确认的角色。列出最容易被遗漏的间接调用方或部署组合，说明发现它们的依据。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

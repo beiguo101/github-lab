@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV 查询</title>
+    <script type="module" crossorigin src="../assets/index-cSJ_vkY6.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/lab-shell-C2vSymSt.js">
+    <link rel="stylesheet" crossorigin href="../assets/lab-shell-D4rnwMMI.css">
+    <link rel="stylesheet" crossorigin href="../assets/index-Cr8doSVR.css">
+  </head>
+  <body data-lab-page="tool">
+    <main>
+      <h1>CSV 查询</h1>
+      <p>选择本地 CSV，在浏览器内查询。数据仅保留在本页内存中，刷新即清空。</p>
+      <label for="file">上传 CSV 文件</label>
+      <input id="file" type="file" accept=".csv,text/csv" disabled aria-describedby="format" />
+      <p id="format">UTF-8 CSV · 第一行作为表头 · Excel 请先另存为 CSV</p>
+      <p id="status" role="status">正在初始化 SQLite…</p>
+      <div class="selectors">
+        <label>按哪一列分组 <select id="group" disabled></select></label>
+        <label>汇总哪一列 <select id="sum" aria-describedby="sum-help" disabled><option value="-1">仅统计条数</option></select></label>
+      </div>
+      <p id="sum-help">汇总需主动选择数字列；编号、手机号等不参与汇总。空值不当作零。</p>
+      <nav class="query-nav" aria-label="预设只读查询">
+        <button type="button" data-query="details" aria-pressed="true" disabled>明细</button>
+        <button type="button" data-query="total" aria-pressed="false" disabled>总计</button>
+        <button type="button" data-query="categories" aria-pressed="false" disabled>分组汇总</button>
+      </nav>
+      <div class="table-wrap">
+        <table hidden>
+          <caption>全部明细</caption>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>依赖和版本升级 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>依赖和版本升级</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>评估引入一个新依赖</h2>
+  <p>判断它解决什么、如何验证能在当前项目用。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：评估引入一个新依赖">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：评估引入一个新依赖">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>候选依赖和版本：[名称、版本、来源]。用途：[任务]。现有语言、框架和构建版本：[填写]。
+
+确认项目已有的替代能力和缺口。对照官方文档或仓库版本说明核查支持环境、许可证、传递依赖、安装代价与维护状态。指出新增运行依赖或网络访问。给出一个最小示例、预期结果和删除该依赖的代价。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>分轮验证一次框架升级</h2>
+  <p>从版本差异到兼容验证和上线决策。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：分轮验证一次框架升级">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：分轮验证一次框架升级">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 查清变化
+
+当前版本、目标版本和依赖锁文件：[填写]。根据官方发布说明列出会影响当前使用方式的变化，关联对应模块，并识别必须同步调整的依赖。
+
+### 第 2 轮 · 执行最小验证
+
+授权环境与检查范围：[填写]。记录升级前基线，在隔离分支或副本做最小升级验证，运行关键服务启动、核心接口和相关测试。按证据记录失败。
+
+### 第 3 轮 · 形成采用意见
+
+根据验证结果说明升级收益、已验证兼容项、待处理问题和回退办法。分出这次可交付范围与后续独立事项。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 查清变化</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 查清变化">复制本轮</button>
+      </div>
+      <pre class="prompt-body">当前版本、目标版本和依赖锁文件：[填写]。根据官方发布说明列出会影响当前使用方式的变化，关联对应模块，并识别必须同步调整的依赖。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 执行最小验证</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 执行最小验证">复制本轮</button>
+      </div>
+      <pre class="prompt-body">授权环境与检查范围：[填写]。记录升级前基线，在隔离分支或副本做最小升级验证，运行关键服务启动、核心接口和相关测试。按证据记录失败。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 形成采用意见</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 形成采用意见">复制本轮</button>
+      </div>
+      <pre class="prompt-body">根据验证结果说明升级收益、已验证兼容项、待处理问题和回退办法。分出这次可交付范围与后续独立事项。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>建立升级兼容矩阵</h2>
+  <p>适合多个运行版本、镜像和客户端一起演进。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：建立升级兼容矩阵">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：建立升级兼容矩阵">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>当前组合：[语言、框架、基础镜像、数据库、客户端]。目标组合与升级窗口：[填写]。验证材料：[粘贴]。
+
+列出实际部署中会共存的组合，并为每组标注官方支持依据、实测状态和关键行为。找出从旧组合到目标组合的最短支持路径，给出每步预检、失败信号、恢复路径和同时变化的变量。优先验证会阻断后续步骤的组合。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

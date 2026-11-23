@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>代码评审 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>代码评审</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>评审一个 PR 的实际行为变化</h2>
+  <p>按证据找可能影响用户或调用方的问题。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：评审一个 PR 的实际行为变化">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：评审一个 PR 的实际行为变化">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>变更范围：[分支、提交或 diff]。需求与验收：[填写]。请只读评审。
+
+沿正常入口核对改动、调用方和相关测试。按严重程度列出有证据的问题，每条给文件位置、触发条件、影响和最小修正方向。测试缺口与已确认缺陷分开。若没有确证问题，指出你实际覆盖的路径及未验证项。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>和开发者做一次可闭环的评审</h2>
+  <p>先审查，收到解释或修订后复核。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：和开发者做一次可闭环的评审">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：和开发者做一次可闭环的评审">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 首次评审
+
+范围与验收：[填写]。阅读 diff 和相关调用点。输出可复查发现，按影响排序，并为每项写明对应代码与触发条件。
+
+### 第 2 轮 · 核对修订
+
+开发者回复、更新后的 diff 和运行结果：[材料]。逐条对照原发现归档为已修复、需补证据或仍存在。查找修订本身引入的实际问题。
+
+### 第 3 轮 · 出合并意见
+
+给出建议合并、补证据后合并或暂缓的理由。列出决策依赖的事实和仍待人工检查的条件。由维护者决定是否合并。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 首次评审</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 首次评审">复制本轮</button>
+      </div>
+      <pre class="prompt-body">范围与验收：[填写]。阅读 diff 和相关调用点。输出可复查发现，按影响排序，并为每项写明对应代码与触发条件。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 核对修订</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 核对修订">复制本轮</button>
+      </div>
+      <pre class="prompt-body">开发者回复、更新后的 diff 和运行结果：[材料]。逐条对照原发现归档为已修复、需补证据或仍存在。查找修订本身引入的实际问题。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 出合并意见</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 出合并意见">复制本轮</button>
+      </div>
+      <pre class="prompt-body">给出建议合并、补证据后合并或暂缓的理由。列出决策依赖的事实和仍待人工检查的条件。由维护者决定是否合并。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>按契约审查高影响变更</h2>
+  <p>适合公共库、公开接口或多人依赖的模块。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：按契约审查高影响变更">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：按契约审查高影响变更">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>变更与验收：[材料]。依赖者和保留契约：[列表]。进行只读审查。
+
+为高影响入口建立“调用方式、旧行为、新行为、现有验证”对照。检查与任务有关的历史数据、错误返回、权限边界和性能路径。按证据强度区分确定缺陷、风险和未观测区。最重要的结论必须给一个具体输入与可复查位置。列出需要维护者裁定的取舍。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

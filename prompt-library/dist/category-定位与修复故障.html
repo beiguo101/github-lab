@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>定位与修复故障 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>定位与修复故障</h1>
+    <p>3 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>从报错和复现步骤定位故障</h2>
+  <p>适合功能回归、启动报错或输出不符预期。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从报错和复现步骤定位故障">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：从报错和复现步骤定位故障">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>现象：[描述]。预期：[描述]。复现输入、环境与日志：[粘贴]。
+
+请先追踪出现异常的入口与上下文。区分已观察证据和假设，列出最可能的原因和用于区分它们的最小检查。若允许在当前环境做检查，记录检查结果与结论。本轮交付诊断和修复建议，等待修改授权。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>从复现到修复，再到回归检查</h2>
+  <p>适合原因未明、需要逐步排除假设的故障。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从复现到修复，再到回归检查">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：从复现到修复，再到回归检查">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 复现和定位
+
+异常：[描述]。用例与日志：[材料]。请在授权环境内尝试复现，记录预期、实际、命令和失败点。给出最多三个假设，按证据排序。此轮先定位。
+
+### 第 2 轮 · 验证根因并修复
+
+可改范围：[填写]。先做一项能区分候选原因的检查，证据支持后修复最小范围。保留触发故障的输入，记下修改前后的差异和检查输出。
+
+### 第 3 轮 · 跑回归
+
+基于原输入和邻近正常输入验证。分别说明复现是否消失、正常行为是否保留、还有哪些环境未经验证。给出一个下次最快识别同类故障的可观察信号。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 复现和定位</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 复现和定位">复制本轮</button>
+      </div>
+      <pre class="prompt-body">异常：[描述]。用例与日志：[材料]。请在授权环境内尝试复现，记录预期、实际、命令和失败点。给出最多三个假设，按证据排序。此轮先定位。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 验证根因并修复</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 验证根因并修复">复制本轮</button>
+      </div>
+      <pre class="prompt-body">可改范围：[填写]。先做一项能区分候选原因的检查，证据支持后修复最小范围。保留触发故障的输入，记下修改前后的差异和检查输出。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 跑回归</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 跑回归">复制本轮</button>
+      </div>
+      <pre class="prompt-body">基于原输入和邻近正常输入验证。分别说明复现是否消失、正常行为是否保留、还有哪些环境未经验证。给出一个下次最快识别同类故障的可观察信号。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>定位跨服务的偶发故障</h2>
+  <p>按时间和请求证据定位症状首次出现的位置。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：定位跨服务的偶发故障">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：定位跨服务的偶发故障">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>影响范围：[填写]。时间窗和时区：[填写]。脱敏日志、指标、最近变更：[材料]。
+
+用请求 ID 或可靠关联字段建立一条时间线，标注各系统的时钟偏差和观测缺口。区分用户症状、首次异常和后续连锁反应。提出可被证伪的假设，为每个假设说明应出现与不应出现的信号。优先选择只读、可重复的区分检查。报告证据覆盖的请求样本及仍未解释的部分。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>

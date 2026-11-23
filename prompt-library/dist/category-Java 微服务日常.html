@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="按工作场景浏览和复制中文提示词。">
+  <title>Java 微服务日常 · 日常提示词库</title>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./copy.js" defer></script>
+</head>
+<body>
+  <main class="container">
+  <a class="back" href="./index.html">返回类别</a>
+  <header class="intro">
+    <h1>Java 微服务日常</h1>
+    <p>12 条提示词</p>
+  </header>
+  <article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>汇总 Maven 构建后的测试报告</h2>
+  <p>把多模块测试报告整理成可追溯的结果。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：汇总 Maven 构建后的测试报告">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：汇总 Maven 构建后的测试报告">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发一个读取 JUnit XML 的命令行工具。输入 [仓库或报告目录] 与 [应有报告的模块清单]，按模块输出通过、失败、错误、跳过、报告缺失和异常文件，失败条目保留用例名与文件来源。先定义汇总口径，保证成功数可对账。验收包含多个模块、一个缺报告模块以及一个无效 XML。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>核对两份投产参数清单</h2>
+  <p>对照确认基准和待投产清单，逐项报告差异。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：核对两份投产参数清单">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：核对两份投产参数清单">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发参数核对工具。输入 [基准清单]、[待投产清单] 和 [CSV 列映射]。以环境、服务、参数名匹配，输出一致、差异、缺项、额外项与重复键，保留两边原值与源行号。用带前导零、空字符串、缺项和 false 的虚构样例验证。语义等价仅按给定规则处理，工具只输出核对结果。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>整理微服务模块和启动入口</h2>
+  <p>扫描 Maven 项目，生成模块、入口与配置清单。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：整理微服务模块和启动入口">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：整理微服务模块和启动入口">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>为 Maven 仓库 [路径] 开发一个只读清单工具。读取已给的 pom.xml、启动类和配置样例，输出模块名、父子模块关系、能定位的启动入口、所需配置名和证据路径。父模块、缺失文件和多个可能入口应区分。配置值保持为占位符。用包含一个聚合模块、一个服务模块和一处缺配置的虚构仓库验收。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">基础 · 单轮</div>
+  <h2>从项目清单提取今日跟进项</h2>
+  <p>按明确日期规则整理到期、逾期和阻塞事项。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：从项目清单提取今日跟进项">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：从项目清单提取今日跟进项">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发只读日程摘要工具。输入 [统计日期]、[任务 CSV] 与 [状态映射]。根据截止日、状态、负责人和依赖输出今天到期、已逾期、受阻和待确认，保留原任务号。定清跨类项的显示和计数规则。用已完成、日期缺失、截止恰为当天、同时逾期且受阻四种记录验证。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>把跨组依赖整理成协调请求和汇报摘要</h2>
+  <p>用同一份事实材料生成组间和管理层草稿。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：把跨组依赖整理成协调请求和汇报摘要">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：把跨组依赖整理成协调请求和汇报摘要">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认输入
+
+输入 [任务清单、沟通记录和汇报对象]。确认本组期望、外组承诺和未确认字段的区分方式，列出两种草稿各自需包含的信息。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现模板化整理
+
+已确认的字段规则与输出结构：[填写]。开发从结构化输入输出两种本地草稿的工具。区分原文、人工决定与程序生成的待确认标记；输出供人审阅。
+
+### 第 3 轮 · 验证两种输出
+
+以只有本组期望日期、外组尚未承诺的样例验收。检查协调稿能说明需要答复什么，管理摘要能准确表述影响，并能回查输入记录。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认输入</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认输入">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [任务清单、沟通记录和汇报对象]。确认本组期望、外组承诺和未确认字段的区分方式，列出两种草稿各自需包含的信息。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现模板化整理</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现模板化整理">复制本轮</button>
+      </div>
+      <pre class="prompt-body">已确认的字段规则与输出结构：[填写]。开发从结构化输入输出两种本地草稿的工具。区分原文、人工决定与程序生成的待确认标记；输出供人审阅。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 验证两种输出</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 验证两种输出">复制本轮</button>
+      </div>
+      <pre class="prompt-body">以只有本组期望日期、外组尚未承诺的样例验收。检查协调稿能说明需要答复什么，管理摘要能准确表述影响，并能回查输入记录。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>按业务测试问题号更新台账</h2>
+  <p>合并开发答复和业务复测，保留状态依据。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：按业务测试问题号更新台账">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：按业务测试问题号更新台账">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认状态口径
+
+输入 [上次台账]、[新增反馈] 和 [状态字典]。明确问题号匹配、时间相同或未知时的处理及关单依据。给出开发已修复但复测失败的预期行，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现台账更新
+
+已确认规则与列映射：[填写]。按完整问题号合并，输出新增、变化和待复测事项。保留反馈方和时间；无编号或冲突记录单列。
+
+### 第 3 轮 · 对账验证
+
+用重复反馈、孤立反馈、复测失败和业务关单四类样例核对。输出条数及错误定位，说明原台账与新台账差异。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认状态口径</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认状态口径">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [上次台账]、[新增反馈] 和 [状态字典]。明确问题号匹配、时间相同或未知时的处理及关单依据。给出开发已修复但复测失败的预期行，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现台账更新</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现台账更新">复制本轮</button>
+      </div>
+      <pre class="prompt-body">已确认规则与列映射：[填写]。按完整问题号合并，输出新增、变化和待复测事项。保留反馈方和时间；无编号或冲突记录单列。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 对账验证</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 对账验证">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用重复反馈、孤立反馈、复测失败和业务关单四类样例核对。输出条数及错误定位，说明原台账与新台账差异。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>比对两版接口契约</h2>
+  <p>先确认比较口径，再生成可回查的差异清单。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：比对两版接口契约">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：比对两版接口契约">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认比较范围
+
+输入 [旧、新 OpenAPI JSON]。先确认规范版本、比较的接口范围，以及路径、方法、必填字段、类型和响应状态码的口径。对未支持的引用或组合结构列出边界，并给出验收样例，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 实现对照
+
+授权范围与口径：[填写]。开发只读工具，逐项输出新增、删除、变化及疑似兼容问题，附两边的 JSON 路径。按已确认范围解析，未知结构明确报告。
+
+### 第 3 轮 · 复核结果
+
+用同一接口的新增必填字段、类型调整、状态码变化和纯文档改动验收。逐条核对预期差异和实际差异，注明未经验证的结构。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认比较范围</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认比较范围">复制本轮</button>
+      </div>
+      <pre class="prompt-body">输入 [旧、新 OpenAPI JSON]。先确认规范版本、比较的接口范围，以及路径、方法、必填字段、类型和响应状态码的口径。对未支持的引用或组合结构列出边界，并给出验收样例，等待确认。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 实现对照</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 实现对照">复制本轮</button>
+      </div>
+      <pre class="prompt-body">授权范围与口径：[填写]。开发只读工具，逐项输出新增、删除、变化及疑似兼容问题，附两边的 JSON 路径。按已确认范围解析，未知结构明确报告。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 复核结果</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 复核结果">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用同一接口的新增必填字段、类型调整、状态码变化和纯文档改动验收。逐条核对预期差异和实际差异，注明未经验证的结构。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">进阶 · 多轮</div>
+  <h2>核对变更清单、应用包和数据库脚本</h2>
+  <p>用可复查的对应规则识别发版缺项和版本差异。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：核对变更清单、应用包和数据库脚本">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制全套：核对变更清单、应用包和数据库脚本">复制全套</button>
+  </div>
+  <template>
+    <pre data-full-prompt hidden>### 第 1 轮 · 确认映射
+
+材料：[发布项、产物清单、SQL 文件清单]。提议服务与产物命名、版本和脚本排序规则，区分显式规则及待确认规则。列出少包、多包、错误版本和重复序号的验收样例。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。
+
+### 第 2 轮 · 产生差异表
+
+确认的映射和授权范围：[填写]。实现只读对照，附输入版本、原始文件名及对应关系。对于多个匹配，保留候选和证据。
+
+### 第 3 轮 · 复核验收
+
+用虚构投产包验证缺项、错版、重复序号和正常路径。注明脚本排序检查基于清单规则，报告每一项的源条目。</pre><section class="prompt-round">
+      <div class="round-header">
+        <h3>第 1 轮 · 确认映射</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 1 轮 · 确认映射">复制本轮</button>
+      </div>
+      <pre class="prompt-body">材料：[发布项、产物清单、SQL 文件清单]。提议服务与产物命名、版本和脚本排序规则，区分显式规则及待确认规则。列出少包、多包、错误版本和重复序号的验收样例。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 2 轮 · 产生差异表</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 2 轮 · 产生差异表">复制本轮</button>
+      </div>
+      <pre class="prompt-body">确认的映射和授权范围：[填写]。实现只读对照，附输入版本、原始文件名及对应关系。对于多个匹配，保留候选和证据。</pre>
+    </section>
+<section class="prompt-round">
+      <div class="round-header">
+        <h3>第 3 轮 · 复核验收</h3>
+        <button class="button copy" type="button" data-copy="round" aria-label="复制第 3 轮 · 复核验收">复制本轮</button>
+      </div>
+      <pre class="prompt-body">用虚构投产包验证缺项、错版、重复序号和正常路径。注明脚本排序检查基于清单规则，报告每一项的源条目。</pre>
+    </section>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>制定并验证测试环境的接口冒烟清单</h2>
+  <p>为指定测试接口生成可复现的请求与断言。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：制定并验证测试环境的接口冒烟清单">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：制定并验证测试环境的接口冒烟清单">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发轻量冒烟工具。输入 [明确允许的测试环境地址]、[接口清单与请求样例]、[状态码及关键字段断言]、[超时]。先输出请求计划，按批准范围执行；凭据使用环境变量，报告保留脱敏诊断。逐接口区分通过、超时、非预期状态码、内容解析失败和断言失败。用本地模拟响应验收成功、超时、返回结构变化三种情况，并提供人工核对方式。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>对比发布前后的运行指标</h2>
+  <p>核对口径后比较请求量、错误率和延迟。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：对比发布前后的运行指标">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：对比发布前后的运行指标">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发离线指标对照工具。输入 [发布前导出]、[发布后导出]、[窗口时区和指标字典]。按相同服务、路由、窗口与统计口径比较请求量、错误率和延迟，展示原值、差值、样本量及缺口。对采样不足、分母为零、窗口不等或延迟统计口径不同的项目输出不可比原因。用等口径和混入口径的两个样例核对结果。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>生成一份投产核对报告</h2>
+  <p>汇总参数、应用包、测试与待确认事项。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：生成一份投产核对报告">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：生成一份投产核对报告">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>将 [参数差异表]、[产物和 SQL 清单差异]、[测试结果]、[待确认列表] 转成 Markdown 投产报告。先确认输入格式与阻塞口径，缺材料时标记证据不足。输出差异摘要、需复核项、原始依据和人工验收动作，每项能回查服务与来源。用参数变更、包版本错误、待复测和正常四类输入验收；同批次重复运行得出一致结论。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+<article class="prompt">
+  <div class="prompt-level">高阶 · 综合运用</div>
+  <h2>按请求 ID 拼接跨服务日志</h2>
+  <p>从脱敏日志生成跨服务时间线和异常证据。</p>
+  <div class="prompt-actions">
+    <button class="button" type="button" data-detail aria-label="查看详情：按请求 ID 拼接跨服务日志">查看详情</button>
+    <button class="button copy" type="button" data-copy aria-label="复制：按请求 ID 拼接跨服务日志">复制</button>
+  </div>
+  <template>
+    <pre class="prompt-body" data-full-prompt>开发只读日志关联工具。输入 [服务与日志文件映射]、[请求 ID]、[时间格式与时区]。保留源文件和行号，按可比时间排序，标记首次可见异常、缺服务记录、无法解析和时间冲突。把观测到的异常与可能根因分开。用交错时间、缺失时区、一个日志文件缺失的虚构数据验证。
+
+目标运行环境为 Python 3.8.3。优先用标准库，采用可公开的虚构样例。交付可运行的入口、示例和验证结果；如果未能用 3.8.3 验证，请注明实际版本。</pre>
+    
+  </template>
+</article>
+</main>
+<dialog class="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detail-title"></h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>关闭</button></form>
+    </header>
+    <div class="detail-content"></div>
+    <footer class="detail-footer">
+      <p class="detail-status" role="status"></p>
+      <button class="button copy" type="button" data-copy>复制提示词</button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status"></div>
+</body>
+</html>
